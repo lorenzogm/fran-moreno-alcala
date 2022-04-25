@@ -1,0 +1,8 @@
+# Ignore artifacts:
+.next
+.turbo
+build
+coverage
+dist
+out
+storybook-static

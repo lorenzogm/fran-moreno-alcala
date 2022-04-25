@@ -1,0 +1,39 @@
+{
+  "$schema": "https://turborepo.org/schema.json",
+  "baseBranch": "origin/main",
+  "pipeline": {
+    "dev": {
+      "cache": false,
+      "dependsOn": ["^dev"]
+    },
+    "lint": {
+      "dependsOn": [],
+      "inputs": ["**/*.tsx", "**/*.ts", "**/*.js", "**/*.json"],
+      "outputs": []
+    },
+    "test": {
+      "dependsOn": [],
+      "inputs": ["**/*.tsx", "**/*.ts", "**/*.js", "**/*.json"],
+      "outputs": ["coverage/**"]
+    },
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["**/*.tsx", "**/*.ts", "**/*.js", "**/*.json"],
+      "outputs": ["dist/**", ".next/**", "storybook-static/**"]
+    },
+    "start": {
+      "dependsOn": ["build"]
+    },
+    "sync": {
+      "dependsOn": []
+    },
+    "deploy": {
+      "dependsOn": ["build", "lint"],
+      "inputs": ["**/*.tsx", "**/*.ts", "**/*.js", "**/*.json"],
+      "outputs": []
+    },
+    "cms-storyblok": {
+      "dependsOn": ["^build", "$STORYBLOK_ACCESS_TOKEN"]
+    }
+  }
+}

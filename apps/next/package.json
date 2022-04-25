@@ -1,0 +1,35 @@
+{
+  "name": "@ring/next",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev",
+    "lint": "next lint --fix",
+    "test": "jest",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@ring/cms-storyblok": "*",
+    "next": "12.1.5",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "@b12k/env-cmd": "10.2.0",
+    "@ring/config-eslint": "*",
+    "@ring/config-jest": "*",
+    "@ring/config-typescript": "*",
+    "@types/node": "17.0.25",
+    "@types/react": "17.0.13",
+    "@types/react-dom": "17.0.8",
+    "autoprefixer": "10.4.4",
+    "eslint": "8.13.0",
+    "next-transpile-modules": "9.0.0",
+    "postcss": "8.4.12",
+    "prettier": "2.6.2",
+    "prettier-plugin-tailwindcss": "0.1.10",
+    "tailwindcss": "3.0.24",
+    "typescript": "4.6.3"
+  }
+}

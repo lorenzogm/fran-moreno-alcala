@@ -1,0 +1,14 @@
+{
+  "pattern": ":type/:description/:issue?",
+  "params": {
+    "type": [
+      "build",
+      "docs",
+      "feat",
+      "fix",
+      "test"
+    ],
+    "description": ["[a-z0-9-]+"],
+    "issue": ["ril-[0-9]+"]
+  }
+}

@@ -1,0 +1,12 @@
+**/.idea
+**/.vscode
+
+**/.next
+**/.turbo
+**/.github
+
+**/out
+**/dist
+**/docs
+**/node_modules
+**/infrastructure

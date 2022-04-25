@@ -1,0 +1,44 @@
+{
+  "name": "@ring/cms-storyblok",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --external react",
+    "dev": "tsup src/index.ts --format esm,cjs --watch --dts --external react",
+    "lint": "TIMING=1 eslint src --fix",
+    "test": "jest",
+    "sync": "cp ../../.env ./.env && yarn storyblok:pull-components && yarn storyblok:generate-types",
+    "storyblok:pull-components": "env-cmd -i npx storyblok pull-components --space {{STORYBLOK_SPACE_ID}}",
+    "storyblok:generate-types": "env-cmd -i storyblok-generate-ts source=./components.{{STORYBLOK_SPACE_ID}}.json target=./src/types/generated/storyblok.types.ts"
+  },
+  "dependencies": {
+    "@ring/ui-tailwind": "*",
+    "@types/react": "17.0.13",
+    "@types/react-dom": "17.0.8",
+    "axios": "0.26.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "storyblok-js-client": "4.3.1",
+    "storyblok-react": "0.1.2"
+  },
+  "devDependencies": {
+    "@b12k/env-cmd": "10.2.0",
+    "@babel/core": "7.17.9",
+    "@ring/config-eslint": "*",
+    "@ring/config-jest": "*",
+    "@ring/config-typescript": "*",
+    "babel-loader": "8.2.5",
+    "eslint": "8.13.0",
+    "storyblok-generate-ts": "1.4.1",
+    "tsup": "^5.10.1",
+    "typescript": "4.6.3"
+  }
+}

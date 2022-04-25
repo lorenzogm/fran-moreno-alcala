@@ -1,0 +1,35 @@
+# .github/workflows/chromatic.yml
+
+# Workflow name
+name: 'Chromatic'
+
+# Event for the workflow
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - packages/ui-design-tokens/**
+      - packages/ui-tailwind/**
+      - packages/ui-tailwind-preset/**
+
+jobs:
+  chromatic-deployment:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 14
+          cache: yarn
+
+      - run: yarn install
+
+      - uses: chromaui/action@v1
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          buildScriptName: storybook:build
+          workingDir: packages/ui-tailwind

@@ -1,0 +1,51 @@
+{
+  "name": "ring",
+  "version": "0.0.0",
+  "private": true,
+  "license": "",
+  "engines": {
+    "npm": "8.x"
+  },
+  "packageManager": "yarn@1.22.15",
+  "workspaces": [
+    "apps/**/*",
+    "configs/**/*",
+    "packages/**/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "cz": "cz",
+    "clean": "run-p clean:*",
+    "clean:next": "rimraf **/.next",
+    "clean:turbo": "rimraf **/.turbo",
+    "clean:dist": "rimraf **/dist",
+    "clean:node": "rimraf **/node_modules",
+    "dev": "env-cmd turbo run dev --parallel",
+    "format": "prettier --write \"**/*.{json,ts,tsx,js,jsx,yaml,md}\"",
+    "lint": "turbo run lint --parallel",
+    "test": "turbo run test --parallel",
+    "start": "turbo run start --parallel",
+    "sync": "turbo run sync --parallel",
+    "#": "##################### ✋ TECHNICAL SCRIPTS 👇 #####################",
+    "prepare": "run-p _prepare-*",
+    "_prepare-husky": "husky install",
+    "_husky-pre-commit": "lint-staged",
+    "_husky-commit-msg": "commitlint"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@b12k/branch-name-lint": "1.0.3",
+    "@b12k/env-cmd": "10.2.0",
+    "@commitlint/cli": "16.2.3",
+    "@commitlint/config-conventional": "16.2.1",
+    "commitizen": "4.2.4",
+    "conventional-changelog-conventionalcommits": "4.6.3",
+    "eslint": "8.13.0",
+    "husky": "7.0.4",
+    "lint-staged": "12.3.8",
+    "npm-run-all": "4.1.5",
+    "prettier": "2.6.2",
+    "shx": "0.3.4",
+    "turbo": "1.2.4"
+  }
+}
