@@ -1,9 +1,9 @@
 export interface ContentPageStoryblok {
   header?: (FooterStoryblok | GlobalStoryblok | GlobalReferenceStoryblok | HeaderStoryblok)[];
   footer?: GlobalReferenceStoryblok[];
-  body?: (FeaturesV1Storyblok | HeroV1Storyblok)[];
+  body?: (FeaturesV1Storyblok | HeroV1Storyblok | HeroV2Storyblok)[];
   _uid: string;
-  component: 'ContentPage';
+  component: "ContentPage";
   [k: string]: any;
 }
 
@@ -11,7 +11,7 @@ export interface DefaultLayoutStoryblok {
   header?: any[];
   footer?: (FooterStoryblok | GlobalStoryblok | GlobalReferenceStoryblok | HeaderStoryblok)[];
   _uid: string;
-  component: 'DefaultLayout';
+  component: "DefaultLayout";
   [k: string]: any;
 }
 
@@ -19,7 +19,7 @@ export interface FeatureStoryblok {
   title: string;
   subtitle: string;
   _uid: string;
-  component: 'Feature';
+  component: "Feature";
   [k: string]: any;
 }
 
@@ -29,34 +29,34 @@ export interface FeaturesV1Storyblok {
   subtitle: string;
   features: FeatureStoryblok[];
   _uid: string;
-  component: 'FeaturesV1';
+  component: "FeaturesV1";
   [k: string]: any;
 }
 
 export interface FooterStoryblok {
   _uid: string;
-  component: 'Footer';
+  component: "Footer";
   [k: string]: any;
 }
 
 export interface GlobalStoryblok {
   global?: (FooterStoryblok | GlobalStoryblok | GlobalReferenceStoryblok | HeaderStoryblok)[];
   _uid: string;
-  component: 'Global';
+  component: "Global";
   [k: string]: any;
 }
 
 export interface GlobalReferenceStoryblok {
   reference?: string;
   _uid: string;
-  component: 'GlobalReference';
+  component: "GlobalReference";
   [k: string]: any;
 }
 
 export interface HeaderStoryblok {
   navigation: NavigationItemStoryblok[];
   _uid: string;
-  component: 'Header';
+  component: "Header";
   [k: string]: any;
 }
 
@@ -74,18 +74,18 @@ export interface HeroV1Storyblok {
     | {
         id?: string;
         cached_url?: string;
-        linktype?: 'story';
+        linktype?: "story";
         [k: string]: any;
       }
     | {
         url?: string;
         cached_url?: string;
-        linktype?: 'asset' | 'url';
+        linktype?: "asset" | "url";
         [k: string]: any;
       }
     | {
         email?: string;
-        linktype?: 'email';
+        linktype?: "email";
         [k: string]: any;
       };
   buttonSecondaryText: string;
@@ -98,18 +98,18 @@ export interface HeroV1Storyblok {
     | {
         id?: string;
         cached_url?: string;
-        linktype?: 'story';
+        linktype?: "story";
         [k: string]: any;
       }
     | {
         url?: string;
         cached_url?: string;
-        linktype?: 'asset' | 'url';
+        linktype?: "asset" | "url";
         [k: string]: any;
       }
     | {
         email?: string;
-        linktype?: 'email';
+        linktype?: "email";
         [k: string]: any;
       };
   image: {
@@ -121,7 +121,39 @@ export interface HeroV1Storyblok {
     title?: string;
   };
   _uid: string;
-  component: 'HeroV1';
+  component: "HeroV1";
+  [k: string]: any;
+}
+
+export interface HeroV2Storyblok {
+  title: string;
+  subtitle: string;
+  buttonText: string;
+  buttonLink:
+    | {
+        cached_url?: string;
+        linktype?: string;
+        [k: string]: any;
+      }
+    | {
+        id?: string;
+        cached_url?: string;
+        linktype?: "story";
+        [k: string]: any;
+      }
+    | {
+        url?: string;
+        cached_url?: string;
+        linktype?: "asset" | "url";
+        [k: string]: any;
+      }
+    | {
+        email?: string;
+        linktype?: "email";
+        [k: string]: any;
+      };
+  _uid: string;
+  component: "HeroV2";
   [k: string]: any;
 }
 
@@ -129,6 +161,6 @@ export interface NavigationItemStoryblok {
   title: string;
   items?: NavigationItemStoryblok[];
   _uid: string;
-  component: 'NavigationItem';
+  component: "NavigationItem";
   [k: string]: any;
 }

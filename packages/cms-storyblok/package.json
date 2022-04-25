@@ -15,9 +15,8 @@
     "dev": "tsup src/index.ts --format esm,cjs --watch --dts --external react",
     "lint": "TIMING=1 eslint src --fix",
     "test": "jest",
-    "sync": "cp ../../.env ./.env && yarn storyblok:pull-components && yarn storyblok:generate-types",
-    "storyblok:pull-components": "env-cmd -i npx storyblok pull-components --space {{STORYBLOK_SPACE_ID}}",
-    "storyblok:generate-types": "env-cmd -i storyblok-generate-ts source=./components.{{STORYBLOK_SPACE_ID}}.json target=./src/types/generated/storyblok.types.ts"
+    "sync:spaces": "./scripts/sync-spaces.sh",
+    "sync:code": "./scripts/sync-code.sh"
   },
   "dependencies": {
     "@ring/ui-tailwind": "*",
