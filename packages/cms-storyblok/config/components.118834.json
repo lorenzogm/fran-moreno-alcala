@@ -154,7 +154,7 @@
       "component_group_uuid": "463f1c70-9e1f-432e-9854-675fa1cd6c95",
       "color": null,
       "icon": null,
-      "component_group_name": "Features"
+      "component_group_name": "Sections"
     },
     {
       "name": "Footer",
@@ -174,7 +174,7 @@
       "component_group_uuid": "52ccda2e-7f71-4c04-ad4b-a535e23bf5a7",
       "color": null,
       "icon": null,
-      "component_group_name": "Features (Global)"
+      "component_group_name": "Sections (Global)"
     },
     {
       "name": "Global",
@@ -201,7 +201,7 @@
       "component_group_uuid": "52ccda2e-7f71-4c04-ad4b-a535e23bf5a7",
       "color": null,
       "icon": null,
-      "component_group_name": "Features (Global)"
+      "component_group_name": "Sections (Global)"
     },
     {
       "name": "GlobalReference",
@@ -231,7 +231,7 @@
       "component_group_uuid": "52ccda2e-7f71-4c04-ad4b-a535e23bf5a7",
       "color": null,
       "icon": null,
-      "component_group_name": "Features (Global)"
+      "component_group_name": "Sections (Global)"
     },
     {
       "name": "Header",
@@ -259,7 +259,7 @@
       "component_group_uuid": "52ccda2e-7f71-4c04-ad4b-a535e23bf5a7",
       "color": null,
       "icon": null,
-      "component_group_name": "Features (Global)"
+      "component_group_name": "Sections (Global)"
     },
     {
       "name": "HeroV1",
@@ -328,7 +328,7 @@
       "component_group_uuid": "463f1c70-9e1f-432e-9854-675fa1cd6c95",
       "color": null,
       "icon": null,
-      "component_group_name": "Features"
+      "component_group_name": "Sections"
     },
     {
       "name": "HeroV2",
@@ -369,7 +369,7 @@
       "component_group_uuid": "463f1c70-9e1f-432e-9854-675fa1cd6c95",
       "color": null,
       "icon": null,
-      "component_group_name": "Features"
+      "component_group_name": "Sections"
     },
     {
       "name": "NavigationItem",
@@ -419,7 +419,7 @@
       "component_group_uuid": "463f1c70-9e1f-432e-9854-675fa1cd6c95",
       "color": null,
       "icon": null,
-      "component_group_name": "Features"
+      "component_group_name": "Sections"
     }
   ]
 }

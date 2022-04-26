@@ -1,2 +1,2 @@
-export * from './RenderFeature';
 export * from './RenderPage';
+export * from './RenderSection';
