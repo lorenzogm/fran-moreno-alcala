@@ -15,8 +15,8 @@
     "dev": "tsup src/index.ts --format esm,cjs --watch --dts --external react",
     "lint": "TIMING=1 eslint src --fix",
     "test": "jest",
-    "sync:spaces": "./scripts/sync-spaces.sh",
-    "sync:code": "./scripts/sync-code.sh"
+    "sync": "./scripts/sync-code.sh",
+    "sync:spaces": "./scripts/sync-spaces.sh"
   },
   "dependencies": {
     "@ring/ui-tailwind": "*",

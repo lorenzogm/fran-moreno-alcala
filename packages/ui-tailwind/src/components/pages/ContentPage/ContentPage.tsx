@@ -1,5 +1,7 @@
 import React, { ReactElement, ReactNode } from 'react';
 
+import { Theme } from '../../../utils';
+
 export type ContentPageProps = {
   body: ReactNode;
   // footer?: ReactNode;
@@ -8,7 +10,7 @@ export type ContentPageProps = {
 
 export function ContentPage({ body /* header, footer */ }: ContentPageProps): ReactElement {
   return (
-    <>
+    <Theme dataTheme="light">
       {/* {header && (
         <header>
           {header}
@@ -20,6 +22,6 @@ export function ContentPage({ body /* header, footer */ }: ContentPageProps): Re
           {footer}
         </footer>
       )} */}
-    </>
+    </Theme>
   );
 }

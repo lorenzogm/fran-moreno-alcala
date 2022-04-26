@@ -1,5 +1,7 @@
 import '../src/styles/global.css';
 
+import { Theme } from 'react-daisyui';
+
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {
@@ -18,3 +20,11 @@ export const parameters = {
     },
   },
 };
+
+export const decorators = [
+  (Story) => (
+    <Theme theme="light">
+      <Story />
+    </Theme>
+  ),
+];

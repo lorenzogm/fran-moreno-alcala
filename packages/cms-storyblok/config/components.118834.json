@@ -11,9 +11,7 @@
           "type": "bloks",
           "restrict_components": true,
           "restrict_type": "groups",
-          "component_group_whitelist": [
-            "52ccda2e-7f71-4c04-ad4b-a535e23bf5a7"
-          ],
+          "component_group_whitelist": ["52ccda2e-7f71-4c04-ad4b-a535e23bf5a7"],
           "default_value": "",
           "pos": 0,
           "maximum": "1"
@@ -23,22 +21,16 @@
           "pos": 1,
           "restrict_components": true,
           "restrict_type": "",
-          "component_group_whitelist": [
-            "52ccda2e-7f71-4c04-ad4b-a535e23bf5a7"
-          ],
+          "component_group_whitelist": ["52ccda2e-7f71-4c04-ad4b-a535e23bf5a7"],
           "maximum": "1",
           "default_value": "",
-          "component_whitelist": [
-            "GlobalReference"
-          ]
+          "component_whitelist": ["GlobalReference"]
         },
         "body": {
           "type": "bloks",
           "restrict_components": true,
           "restrict_type": "groups",
-          "component_group_whitelist": [
-            "463f1c70-9e1f-432e-9854-675fa1cd6c95"
-          ],
+          "component_group_whitelist": ["463f1c70-9e1f-432e-9854-675fa1cd6c95"],
           "pos": 2
         }
       },
@@ -66,9 +58,7 @@
           "type": "bloks",
           "restrict_components": false,
           "restrict_type": "groups",
-          "component_group_whitelist": [
-            "52ccda2e-7f71-4c04-ad4b-a535e23bf5a7"
-          ],
+          "component_group_whitelist": ["52ccda2e-7f71-4c04-ad4b-a535e23bf5a7"],
           "required": false,
           "maximum": "1"
         },
@@ -76,9 +66,7 @@
           "type": "bloks",
           "restrict_components": true,
           "restrict_type": "groups",
-          "component_group_whitelist": [
-            "52ccda2e-7f71-4c04-ad4b-a535e23bf5a7"
-          ],
+          "component_group_whitelist": ["52ccda2e-7f71-4c04-ad4b-a535e23bf5a7"],
           "maximum": "1"
         }
       },
@@ -150,9 +138,7 @@
         "features": {
           "type": "bloks",
           "restrict_components": true,
-          "component_whitelist": [
-            "Feature"
-          ],
+          "component_whitelist": ["Feature"],
           "required": true,
           "maximum": "4"
         }
@@ -201,9 +187,7 @@
           "type": "bloks",
           "restrict_components": true,
           "restrict_type": "groups",
-          "component_group_whitelist": [
-            "52ccda2e-7f71-4c04-ad4b-a535e23bf5a7"
-          ]
+          "component_group_whitelist": ["52ccda2e-7f71-4c04-ad4b-a535e23bf5a7"]
         }
       },
       "image": null,
@@ -259,9 +243,7 @@
         "navigation": {
           "type": "bloks",
           "restrict_components": true,
-          "component_whitelist": [
-            "NavigationItem"
-          ],
+          "component_whitelist": ["NavigationItem"],
           "required": true,
           "maximum": ""
         }
@@ -329,9 +311,7 @@
         },
         "image": {
           "type": "asset",
-          "filetypes": [
-            "images"
-          ],
+          "filetypes": ["images"],
           "required": true,
           "display_name": "",
           "pos": 7
@@ -406,9 +386,7 @@
         "items": {
           "type": "bloks",
           "restrict_components": true,
-          "component_whitelist": [
-            "NavigationItem"
-          ]
+          "component_whitelist": ["NavigationItem"]
         }
       },
       "image": null,
@@ -422,6 +400,26 @@
       "component_group_uuid": null,
       "color": null,
       "icon": null
+    },
+    {
+      "name": "ProductDetailV1",
+      "display_name": null,
+      "created_at": "2022-04-26T11:30:08.868Z",
+      "updated_at": "2022-04-26T11:30:08.868Z",
+      "id": 2387343,
+      "schema": {},
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "ProductDetailV1",
+      "component_group_uuid": "463f1c70-9e1f-432e-9854-675fa1cd6c95",
+      "color": null,
+      "icon": null,
+      "component_group_name": "Features"
     }
   ]
 }
