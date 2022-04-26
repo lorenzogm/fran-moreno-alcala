@@ -6,7 +6,7 @@ import { HeroV2 as HeroV2UI } from './HeroV2';
 import { HeroV2Mock } from './HeroV2.mocks';
 
 export default {
-  title: 'Features/Hero',
+  title: 'Sections/Hero',
   component: HeroV2UI,
 } as Meta;
 

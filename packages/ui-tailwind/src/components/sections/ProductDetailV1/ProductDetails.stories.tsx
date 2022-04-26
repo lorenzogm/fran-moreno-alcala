@@ -5,7 +5,7 @@ import { ProductDetailV1 as ProductDetailV1UI } from './ProductDetailV1';
 // import { ProductDetailV1Mock } from './ProductDetailV1.mocks';
 
 export default {
-  title: 'Features/ProductDetail',
+  title: 'Sections/ProductDetail',
   component: ProductDetailV1UI,
 } as Meta;
 

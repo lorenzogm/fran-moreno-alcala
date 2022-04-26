@@ -1,36 +1,36 @@
 import React, { ReactElement } from 'react';
 import StoryblokReact from 'storyblok-react';
 
-import { FeaturesV1 } from '../../components/features/FeaturesV1';
-import { HeroV1 } from '../../components/features/HeroV1';
-import { HeroV2 } from '../../components/features/HeroV2';
-import { ProductDetailV1 } from '../../components/features/ProductDetailV1';
+import { FeaturesV1 } from '../../components/sections/FeaturesV1';
+import { HeroV1 } from '../../components/sections/HeroV1';
+import { HeroV2 } from '../../components/sections/HeroV2';
+import { ProductDetailV1 } from '../../components/sections/ProductDetailV1';
 import type { FeaturesV1Storyblok, HeroV1Storyblok, HeroV2Storyblok, ProductDetailV1Storyblok } from '../../types';
 import { Placeholder } from '../Placeholder';
 
-export type FeaturesProps = HeroV1Storyblok | HeroV2Storyblok | FeaturesV1Storyblok | ProductDetailV1Storyblok;
+export type SectionsProps = HeroV1Storyblok | HeroV2Storyblok | FeaturesV1Storyblok | ProductDetailV1Storyblok;
 
-const Features = {
+const Sections = {
   HeroV1,
   HeroV2,
   FeaturesV1,
   ProductDetailV1,
 };
 
-type RenderFeatureProps = {
-  content: FeaturesProps;
+type RenderSectionProps = {
+  content: SectionsProps;
 };
 
-export function RenderFeature({ content }: RenderFeatureProps): ReactElement {
+export function RenderSection({ content }: RenderSectionProps): ReactElement {
   if (typeof content === 'undefined') {
     return <Placeholder componentName="content" />;
   }
 
-  if (typeof Features[content.component] === 'undefined') {
+  if (typeof Sections[content.component] === 'undefined') {
     return <Placeholder componentName={content.component} />;
   }
 
-  const Component = Features[content.component];
+  const Component = Sections[content.component];
 
   return (
     <StoryblokReact

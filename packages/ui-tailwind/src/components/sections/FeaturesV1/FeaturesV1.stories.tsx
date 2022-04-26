@@ -6,7 +6,7 @@ import { FeaturesV1 as FeaturesV1UI } from './FeaturesV1';
 import { FeaturesV1Mock } from './FeaturesV1.mocks';
 
 export default {
-  title: 'Features/Features',
+  title: 'Sections/Features',
   component: FeaturesV1UI,
 } as Meta;
 
