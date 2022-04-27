@@ -3,12 +3,12 @@ import React, { ReactElement, ReactNode } from 'react';
 import { Theme } from '../../../utils';
 
 export type ContentPageProps = {
-  body: ReactNode;
+  main: ReactNode;
   // footer?: ReactNode;
   // header?: ReactNode;
 };
 
-export function ContentPage({ body /* header, footer */ }: ContentPageProps): ReactElement {
+export function ContentPage({ main /* header, footer */ }: ContentPageProps): ReactElement {
   return (
     <Theme dataTheme="light">
       {/* {header && (
@@ -16,7 +16,7 @@ export function ContentPage({ body /* header, footer */ }: ContentPageProps): Re
           {header}
         </header>
       )} */}
-      {body && <main>{body}</main>}
+      {main && <main>{main}</main>}
       {/* {footer && (
         <footer>
           {footer}

@@ -1,61 +1,68 @@
 import React from 'react';
 
-export function ProductDetailV1() {
+import { Button } from '../../elements/Button';
+
+type ProductDetailV1Props = {
+  product: Product;
+};
+
+export type Product = {
+  name: string;
+  price: string;
+  currency: string;
+  sale: boolean;
+  sale_price: string | null;
+  description: string;
+  images: Array<Image>;
+};
+
+type Image = {
+  file: {
+    url: string;
+  };
+};
+
+export function ProductDetailV1({ product }: ProductDetailV1Props) {
   return (
     <section className="py-20">
       <div className="container mx-auto px-4">
         <div className="-mx-4 mb-24 flex flex-wrap">
           <div className="mb-8 w-full px-4 md:mb-0 md:w-1/2">
             <div className="relative mb-10" style={{ height: '564px' }}>
-              <a className="translate-1/2 absolute top-1/2 left-0 ml-8 transform" href="#">
+              {/* <a className="translate-1/2 absolute top-1/2 left-0 ml-8 transform" href="#">
                 <svg fill="none" height="18" viewBox="0 0 10 18" width="10" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M9 16.0185C9.268 16.2905 9.268 16.7275 9 16.9975C8.732 17.2675 8.299 17.2685 8.031 16.9975L0.201 9.0895C-0.067 8.8195 -0.067 8.3825 0.201 8.1105L8.031 0.2025C8.299 -0.0675 8.732 -0.0675 9 0.2025C9.268 0.4735 9.268 0.9115 9 1.1815L1.859 8.6005L9 16.0185Z"
                     fill="#1F40FF"
                   />
                 </svg>
-              </a>
-              <img alt="" className="h-full w-full object-cover" src="yofte-assets/images/product-bottle.png" />
-              <a className="translate-1/2 absolute top-1/2 right-0 mr-8 transform" href="#">
+              </a> */}
+              <img alt="" className="h-full w-full object-cover" src={product.images[0].file.url} />
+              {/* <a className="translate-1/2 absolute top-1/2 right-0 mr-8 transform" href="#">
                 <svg fill="none" height="18" viewBox="0 0 10 18" width="10" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M0.19922 1.1817C-0.0687795 0.909696 -0.0687794 0.472695 0.19922 0.202695C0.46722 -0.0673054 0.90022 -0.0683048 1.16822 0.202695L8.99822 8.11069C9.26622 8.3807 9.26622 8.81769 8.99822 9.08969L1.16822 16.9977C0.900219 17.2677 0.467218 17.2677 0.199219 16.9977C-0.0687809 16.7267 -0.0687808 16.2887 0.199219 16.0187L7.34022 8.5997L0.19922 1.1817Z"
                     fill="#1F40FF"
                   />
                 </svg>
-              </a>
+              </a> */}
             </div>
-            <div className="-mx-2 flex flex-wrap">
-              <div className="w-1/2 p-2 sm:w-1/4">
-                <a className="block border border-blue-300" href="#">
-                  <img alt="" className="h-32 w-full object-cover" src="yofte-assets/images/product-bottle.png" />
-                </a>
-              </div>
-              <div className="w-1/2 p-2 sm:w-1/4">
-                <a className="block border border-transparent hover:border-gray-400" href="#">
-                  <img alt="" className="h-32 w-full object-cover" src="yofte-assets/images/product-bottle2.png" />
-                </a>
-              </div>
-              <div className="w-1/2 p-2 sm:w-1/4">
-                <a className="block border border-transparent hover:border-gray-400" href="#">
-                  <img alt="" className="h-32 w-full object-cover" src="yofte-assets/images/product-bottle3.png" />
-                </a>
-              </div>
-              <div className="w-1/2 p-2 sm:w-1/4">
-                <a className="block border border-transparent hover:border-gray-400" href="#">
-                  <img alt="" className="h-32 w-full object-cover" src="yofte-assets/images/product-bottle4.png" />
-                </a>
-              </div>
-            </div>
+            {/* <div className="-mx-2 flex flex-wrap">
+              {product.images.map((image) => (
+                <div className="w-1/2 p-2 sm:w-1/4">
+                  <a className="block border border-blue-300" href="#">
+                    <img alt="" className="h-32 w-full object-cover" src={image.file.url} />
+                  </a>
+                </div>
+              ))}
+            </div> */}
           </div>
           <div className="w-full px-4 md:w-1/2">
             <div className="lg:pl-20">
               <div className="mb-10 border-b pb-10">
-                <span className="text-gray-500">Brille</span>
-                <h2 className="font-heading mt-2 mb-6 max-w-xl text-5xl font-bold md:text-6xl">
-                  BRILE water filter carafe
-                </h2>
-                <div className="mb-8">
+                {/* <span className="text-gray-500">Brille</span> */}
+                <h1>{product.name}</h1>
+                {/* <div className="mb-8">
                   <button>
                     <img alt="" src="yofte-assets/elements/star-gold.svg" />
                   </button>
@@ -71,14 +78,18 @@ export function ProductDetailV1() {
                   <button>
                     <img alt="" src="yofte-assets/elements/star-gray.svg" />
                   </button>
-                </div>
+                </div> */}
                 <p className="font-heading mb-8 inline-block text-2xl font-bold text-blue-300">
-                  <span>$29.99</span>
-                  <span className="text-base font-normal text-gray-400 line-through">$33.69</span>
+                  <span>
+                    {product.sale ? product.sale_price : product.price} {product.currency}
+                  </span>
+                  {product.sale && (
+                    <span className="text-base font-normal text-gray-400 line-through">
+                      {product.price} {product.currency}
+                    </span>
+                  )}
                 </p>
-                <p className="max-w-md text-gray-500">
-                  Maecenas commodo libero ut molestie dictum. Morbi placerat eros id porttitor sagittis.
-                </p>
+                {product.description && <p className="max-w-md text-gray-500">{product.description}</p>}
               </div>
               <div className="mb-12 flex">
                 <div className="mr-6">
@@ -121,12 +132,9 @@ export function ProductDetailV1() {
               </div>
               <div className="-mx-4 mb-14 flex flex-wrap items-center">
                 <div className="mb-4 w-full px-4 xl:mb-0 xl:w-2/3">
-                  <a
-                    className="font-heading block rounded-md bg-orange-300 py-5 px-8 text-center font-bold uppercase text-white transition duration-200 hover:bg-orange-400"
-                    href="#"
-                  >
+                  <Button color="primary" fullWidth>
                     Add to cart
-                  </a>
+                  </Button>
                 </div>
                 <div className="w-full px-4 xl:w-1/3">
                   <a
@@ -172,7 +180,7 @@ export function ProductDetailV1() {
                   </a>
                 </div>
               </div>
-              <div className="flex items-center">
+              {/* <div className="flex items-center">
                 <span className="font-heading mr-8 font-bold uppercase text-gray-500">SHARE IT</span>
                 <a className="mr-1 h-8 w-8" href="#">
                   <img alt="" src="yofte-assets/buttons/facebook-circle.svg" />
@@ -183,11 +191,11 @@ export function ProductDetailV1() {
                 <a className="h-8 w-8" href="#">
                   <img alt="" src="yofte-assets/buttons/twitter-circle.svg" />
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
-        <div>
+        {/* <div>
           <ul className="mb-16 flex flex-wrap border-b-2">
             <li className="w-1/2 md:w-auto">
               <a className="font-heading inline-block bg-white py-6 px-10 font-bold text-gray-500 shadow-2xl" href="#">
@@ -216,7 +224,7 @@ export function ProductDetailV1() {
             auctor nibh. Aliquam tincidunt placerat mollis. Lorem euismod dignissim, felis tortor ollis eros, non
             ultricies turpis.
           </p>
-        </div>
+        </div> */}
       </div>
     </section>
   );

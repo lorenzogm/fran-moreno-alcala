@@ -10,4 +10,9 @@ module.exports = withTranspileModules({
     // a non-locale prefixed path e.g. `/hello`
     defaultLocale: 'en',
   },
+  webpack: (config) => {
+    config.resolve.fallback = { crypto: false, fs: false, net: false, tls: false };
+
+    return config;
+  },
 });

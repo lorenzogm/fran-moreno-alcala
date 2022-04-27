@@ -7,7 +7,7 @@ type UseStoryblokProps = {
   story: Story;
   preview: boolean;
   locale: string;
-  resolveRelations: Array<string>;
+  resolveRelations?: Array<string>;
 };
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types

@@ -1,0 +1,40 @@
+{
+  "name": "@ring/commerce-swell",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --external react",
+    "dev": "tsup src/index.ts --format esm,cjs --watch --dts --external react",
+    "lint": "TIMING=1 eslint src --fix",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@ring/ui-tailwind": "*",
+    "@types/react": "17.0.13",
+    "@types/react-dom": "17.0.8",
+    "axios": "0.26.1",
+    "crypto": "1.0.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "swell-node": "4.0.9"
+  },
+  "devDependencies": {
+    "@b12k/env-cmd": "10.2.0",
+    "@babel/core": "7.17.9",
+    "@ring/config-eslint": "*",
+    "@ring/config-jest": "*",
+    "@ring/config-typescript": "*",
+    "babel-loader": "8.2.5",
+    "eslint": "8.13.0",
+    "tsup": "^5.10.1",
+    "typescript": "4.6.3"
+  }
+}

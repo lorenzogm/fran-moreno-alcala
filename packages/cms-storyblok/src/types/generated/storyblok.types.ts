@@ -1,15 +1,35 @@
 export interface ContentPageStoryblok {
-  header?: (FooterStoryblok | GlobalStoryblok | GlobalReferenceStoryblok | HeaderStoryblok)[];
-  footer?: GlobalReferenceStoryblok[];
-  body?: (FeaturesV1Storyblok | HeroV1Storyblok | HeroV2Storyblok | ProductDetailV1Storyblok)[];
+  layout?: DefaultLayoutStoryblok[];
+  main?: (
+    | FeaturesV1Storyblok
+    | FooterV1Storyblok
+    | HeaderV1Storyblok
+    | HeroV1Storyblok
+    | HeroV2Storyblok
+    | ProductDetailV1Storyblok
+  )[];
   _uid: string;
   component: 'ContentPage';
   [k: string]: any;
 }
 
 export interface DefaultLayoutStoryblok {
-  header?: any[];
-  footer?: (FooterStoryblok | GlobalStoryblok | GlobalReferenceStoryblok | HeaderStoryblok)[];
+  header?: (
+    | FeaturesV1Storyblok
+    | FooterV1Storyblok
+    | HeaderV1Storyblok
+    | HeroV1Storyblok
+    | HeroV2Storyblok
+    | ProductDetailV1Storyblok
+  )[];
+  footer?: (
+    | FeaturesV1Storyblok
+    | FooterV1Storyblok
+    | HeaderV1Storyblok
+    | HeroV1Storyblok
+    | HeroV2Storyblok
+    | ProductDetailV1Storyblok
+  )[];
   _uid: string;
   component: 'DefaultLayout';
   [k: string]: any;
@@ -33,30 +53,16 @@ export interface FeaturesV1Storyblok {
   [k: string]: any;
 }
 
-export interface FooterStoryblok {
+export interface FooterV1Storyblok {
   _uid: string;
-  component: 'Footer';
+  component: 'FooterV1';
   [k: string]: any;
 }
 
-export interface GlobalStoryblok {
-  global?: (FooterStoryblok | GlobalStoryblok | GlobalReferenceStoryblok | HeaderStoryblok)[];
-  _uid: string;
-  component: 'Global';
-  [k: string]: any;
-}
-
-export interface GlobalReferenceStoryblok {
-  reference?: string;
-  _uid: string;
-  component: 'GlobalReference';
-  [k: string]: any;
-}
-
-export interface HeaderStoryblok {
+export interface HeaderV1Storyblok {
   navigation: NavigationItemStoryblok[];
   _uid: string;
-  component: 'Header';
+  component: 'HeaderV1';
   [k: string]: any;
 }
 
