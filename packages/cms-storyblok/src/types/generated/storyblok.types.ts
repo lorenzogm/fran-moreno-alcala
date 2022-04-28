@@ -6,6 +6,7 @@ export interface ContentPageStoryblok {
     | HeaderV1Storyblok
     | HeroV1Storyblok
     | HeroV2Storyblok
+    | NavigationV1Storyblok
     | ProductDetailV1Storyblok
   )[];
   _uid: string;
@@ -20,6 +21,7 @@ export interface DefaultLayoutStoryblok {
     | HeaderV1Storyblok
     | HeroV1Storyblok
     | HeroV2Storyblok
+    | NavigationV1Storyblok
     | ProductDetailV1Storyblok
   )[];
   footer?: (
@@ -28,6 +30,7 @@ export interface DefaultLayoutStoryblok {
     | HeaderV1Storyblok
     | HeroV1Storyblok
     | HeroV2Storyblok
+    | NavigationV1Storyblok
     | ProductDetailV1Storyblok
   )[];
   _uid: string;
@@ -165,9 +168,40 @@ export interface HeroV2Storyblok {
 
 export interface NavigationItemStoryblok {
   title: string;
+  link?:
+    | {
+        cached_url?: string;
+        linktype?: string;
+        [k: string]: any;
+      }
+    | {
+        id?: string;
+        cached_url?: string;
+        linktype?: 'story';
+        [k: string]: any;
+      }
+    | {
+        url?: string;
+        cached_url?: string;
+        linktype?: 'asset' | 'url';
+        [k: string]: any;
+      }
+    | {
+        email?: string;
+        linktype?: 'email';
+        [k: string]: any;
+      };
   items?: NavigationItemStoryblok[];
   _uid: string;
   component: 'NavigationItem';
+  [k: string]: any;
+}
+
+export interface NavigationV1Storyblok {
+  title?: string;
+  navigation?: NavigationItemStoryblok[];
+  _uid: string;
+  component: 'NavigationV1';
   [k: string]: any;
 }
 

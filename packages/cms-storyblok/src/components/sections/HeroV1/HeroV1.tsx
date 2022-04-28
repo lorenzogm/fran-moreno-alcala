@@ -1,8 +1,8 @@
 import { HeroV1 as HeroV1UI } from '@ring/ui-tailwind';
 import React, { ReactElement } from 'react';
 
-import { useStoryblokLink } from '../../../hooks';
 import type { HeroV1Storyblok } from '../../../types';
+import { parseLink } from '../../../utils/parseLink';
 
 type HeroV1Props = HeroV1Storyblok;
 
@@ -23,14 +23,11 @@ export function HeroV1({
   buttonSecondaryText,
   image,
 }: HeroV1Props): ReactElement {
-  const buttonPrimaryLinkUrl = useStoryblokLink({ link: buttonPrimaryLink });
-  const buttonSecondaryLinkUrl = useStoryblokLink({ link: buttonSecondaryLink });
-
   return (
     <HeroV1UI
-      buttonPrimaryLink={buttonPrimaryLinkUrl}
+      buttonPrimaryLink={parseLink(buttonPrimaryLink)}
       buttonPrimaryText={buttonPrimaryText}
-      buttonSecondaryLink={buttonSecondaryLinkUrl}
+      buttonSecondaryLink={parseLink(buttonSecondaryLink)}
       buttonSecondaryText={buttonSecondaryText}
       image={{ src: image.filename, alt: image.alt || image.name }}
       navigation={navigation}

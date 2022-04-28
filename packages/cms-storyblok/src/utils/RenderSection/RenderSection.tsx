@@ -4,6 +4,7 @@ import StoryblokReact from 'storyblok-react';
 import { FeaturesV1 } from '../../components/sections/FeaturesV1';
 import { HeroV1 } from '../../components/sections/HeroV1';
 import { HeroV2 } from '../../components/sections/HeroV2';
+import { NavigationV1 } from '../../components/sections/NavigationV1';
 import { ProductDetailV1 } from '../../components/sections/ProductDetailV1';
 import type { FeaturesV1Storyblok, HeroV1Storyblok, HeroV2Storyblok, ProductDetailV1Storyblok } from '../../types';
 import { Placeholder } from '../Placeholder';
@@ -14,6 +15,7 @@ const Sections = {
   HeroV1,
   HeroV2,
   FeaturesV1,
+  NavigationV1,
   ProductDetailV1,
 };
 

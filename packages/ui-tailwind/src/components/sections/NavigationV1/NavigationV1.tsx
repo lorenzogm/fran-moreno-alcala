@@ -3,7 +3,7 @@ import { Navbar } from 'react-daisyui';
 
 export type NavigationV1Props = {
   navigation: Array<Link>;
-  title: string;
+  title?: string;
 };
 
 type Link = {
@@ -15,7 +15,7 @@ export function NavigationV1({ title, navigation }: NavigationV1Props) {
   return (
     <Navbar className="navbar bg-neutral text-neutral-content shadow-lg">
       <Navbar.Start className="navbar-start mx-2 px-2">
-        <span className="text-lg font-bold">{title}</span>
+        {title ? <span className="text-lg font-bold">{title}</span> : null}
       </Navbar.Start>
 
       <Navbar.Center className="navbar-center mx-2 px-2">
