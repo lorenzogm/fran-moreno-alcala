@@ -161,6 +161,14 @@ export interface HeroV2Storyblok {
         linktype?: 'email';
         [k: string]: any;
       };
+  image?: {
+    alt?: string;
+    copyright?: string;
+    id: number;
+    filename: string;
+    name: string;
+    title?: string;
+  };
   _uid: string;
   component: 'HeroV2';
   [k: string]: any;

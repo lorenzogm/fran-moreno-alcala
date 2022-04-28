@@ -10,7 +10,7 @@ export type ContentPageProps = {
 
 export function ContentPage({ main /* header, footer */ }: ContentPageProps): ReactElement {
   return (
-    <Theme dataTheme="light">
+    <Theme dataTheme="black">
       {/* {header && (
         <header>
           {header}
