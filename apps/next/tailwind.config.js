@@ -1,6 +1,11 @@
 module.exports = {
-  content: ['src/**/*.{js,ts,jsx,tsx}', '../../packages/ui-tailwind/**/*.{js,ts,jsx,tsx}'],
-  plugins: [require('daisyui')],
+  content: ['../../packages/ui-tailwind/**/*.tsx'],
+  safelist: [
+    {
+      pattern: /./,
+    },
+  ],
+  plugins: [require('@tailwindcss/typography'), require('daisyui')],
   theme: {
     extend: {},
   },
