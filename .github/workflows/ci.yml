@@ -29,5 +29,5 @@ jobs:
           cache: yarn
 
       - run: yarn install
-      - run: yarn turbo run lint build
-      # - run: yarn turbo run lint test build
+      - run: yarn turbo run build lint
+      # - run: yarn turbo run build test lint
