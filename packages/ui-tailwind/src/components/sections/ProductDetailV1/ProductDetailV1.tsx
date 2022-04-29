@@ -95,7 +95,7 @@ export function ProductDetailV1({ product }: ProductDetailV1Props) {
                 <div className="mr-6">
                   <span className="font-heading mb-4 block font-bold uppercase text-gray-400">QTY</span>
                   <div className="font-heading inline-flex items-center rounded-md border border-gray-200 px-4 font-semibold text-gray-500 focus:border-blue-300 focus:ring-blue-300">
-                    <button className="py-2 hover:text-gray-700">
+                    <button className="py-2 hover:text-gray-700" type="button">
                       <svg fill="none" height="2" viewBox="0 0 12 2" width="12" xmlns="http://www.w3.org/2000/svg">
                         <g opacity="0.35">
                           <rect fill="currentColor" height="12" transform="rotate(90 12 0)" width="2" x="12" />
@@ -107,7 +107,7 @@ export function ProductDetailV1({ product }: ProductDetailV1Props) {
                       placeholder="1"
                       type="number"
                     />
-                    <button className="py-2 hover:text-gray-700">
+                    <button className="py-2 hover:text-gray-700" type="button">
                       <svg fill="none" height="12" viewBox="0 0 12 12" width="12" xmlns="http://www.w3.org/2000/svg">
                         <g opacity="0.35">
                           <rect fill="currentColor" height="12" width="2" x="5" />
@@ -139,7 +139,7 @@ export function ProductDetailV1({ product }: ProductDetailV1Props) {
                 <div className="w-full px-4 xl:w-1/3">
                   <a
                     className="ml-auto mr-4 inline-flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-md border hover:border-gray-500 sm:ml-0"
-                    href="#"
+                    href="/"
                   >
                     <svg
                       className="h-6 w-6"
@@ -160,7 +160,7 @@ export function ProductDetailV1({ product }: ProductDetailV1Props) {
                   </a>
                   <a
                     className="inline-flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-md border hover:border-gray-500"
-                    href="#"
+                    href="/"
                   >
                     <svg
                       className="h-6 w-6"
