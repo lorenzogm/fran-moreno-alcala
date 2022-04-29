@@ -6,7 +6,7 @@ module.exports = {
   onboarding: false,
   platform: 'github',
   includeForks: true,
-  repositories: [],
+  repositories: ['valtech-ch/ring'],
   packageRules: [
     {
       description: 'lockFileMaintenance',

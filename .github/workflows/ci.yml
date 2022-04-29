@@ -9,6 +9,7 @@ on:
       - packages/**
   pull_request:
     types: [opened, synchronize]
+    paths:
       - apps/**
       - configs/**
       - packages/**
@@ -37,4 +38,3 @@ jobs:
 
       - run: yarn install
       - run: yarn turbo run build lint
-      # - run: yarn turbo run build test lint
