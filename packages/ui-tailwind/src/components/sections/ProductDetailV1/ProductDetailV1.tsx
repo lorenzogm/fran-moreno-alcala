@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Button } from '../../elements/Button';
 
-type ProductDetailV1Props = {
+export type ProductDetailV1Props = {
   product: Product;
 };
 
