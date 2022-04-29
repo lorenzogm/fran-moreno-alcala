@@ -11,10 +11,11 @@
   ],
   "sideEffects": false,
   "scripts": {
-    "build": "tsup src/index.ts --format esm,cjs --dts --external react",
-    "dev": "tsup src/index.ts --format esm,cjs --watch --dts --external react",
+    "build": "yarn tsup --minify",
+    "dev": "yarn tsup --watch",
     "lint": "TIMING=1 eslint src --fix",
-    "test": "jest"
+    "test": "jest",
+    "tsup": "tsup src/index.ts --format esm,cjs --dts --external react"
   },
   "dependencies": {},
   "devDependencies": {
