@@ -1,17 +1,12 @@
-import { SectionsProps, Story } from '@ring/cms-storyblok';
+import { SectionsProps } from '@ring/cms-storyblok';
 import { sectionFetcherMapping } from '@ring/commerce-swell';
 
 type GetSectionsDataProps = {
-  content: Story['content'];
+  sections: Array<string>;
   productSlug?: string;
 };
 
-export async function getSectionsData({ content, productSlug }: GetSectionsDataProps) {
-  const sections: Array<string> = [
-    ...content.main.map((section: SectionsProps) => section.component),
-    // ...content.layout.map((section: SectionsProps) => section.component),
-  ];
-
+export async function getSectionsData({ sections, productSlug }: GetSectionsDataProps) {
   // unique values
   const sectionsNameUnique = sections.filter((sectionName, index) => sections.indexOf(sectionName) === index);
 
@@ -36,6 +31,7 @@ export async function getSectionsData({ content, productSlug }: GetSectionsDataP
     }),
   };
 
+  // eslint-disable-next-line no-console
   const sectionListData = await Promise.all(sectionsFetcher.fetchers).catch((e) => console.error(e));
 
   if (!sectionListData) {

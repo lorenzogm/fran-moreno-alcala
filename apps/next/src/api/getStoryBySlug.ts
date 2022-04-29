@@ -13,6 +13,7 @@ export async function getStoryBySlug({ slug, locale, preview }: GetStoryBySlugPr
     language: locale,
     ...(preview ? { cv: Date.now() } : {}),
     resolve_links: 'url',
+    resolve_relations: ['ContentPage.layout'],
   });
 
   // eslint-disable-next-line @typescript-eslint/no-unsafe-return

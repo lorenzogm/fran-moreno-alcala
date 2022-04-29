@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import StoryblokReact from 'storyblok-react';
 
-import { ContentPage } from '../../components/pages/ContentPage';
+import { ContentPage } from '../../pages/ContentPage';
 import { ContentPageStoryblok } from '../../types';
 import { Placeholder } from '../Placeholder';
 

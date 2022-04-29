@@ -1,6 +1,6 @@
 export interface ContentPageStoryblok {
-  layout?: DefaultLayoutStoryblok[];
-  main?: (
+  layout?: string;
+  sections?: (
     | FeaturesV1Storyblok
     | FooterV1Storyblok
     | HeaderV1Storyblok
@@ -59,6 +59,47 @@ export interface FeaturesV1Storyblok {
 export interface FooterV1Storyblok {
   _uid: string;
   component: 'FooterV1';
+  [k: string]: any;
+}
+
+export interface GlobalStoryblok {
+  header?: (
+    | FeaturesV1Storyblok
+    | FooterV1Storyblok
+    | HeaderV1Storyblok
+    | HeroV1Storyblok
+    | HeroV2Storyblok
+    | NavigationV1Storyblok
+    | ProductDetailV1Storyblok
+  )[];
+  footer?: (
+    | FeaturesV1Storyblok
+    | FooterV1Storyblok
+    | HeaderV1Storyblok
+    | HeroV1Storyblok
+    | HeroV2Storyblok
+    | NavigationV1Storyblok
+    | ProductDetailV1Storyblok
+  )[];
+  _uid: string;
+  component: 'Global';
+  [k: string]: any;
+}
+
+export interface GlobalConfigStoryblok {
+  metaTitle?: string;
+  metaDescription?: string;
+  metaOpenGraphImage?: {
+    alt?: string;
+    copyright?: string;
+    id: number;
+    filename: string;
+    name: string;
+    title?: string;
+  };
+  favicon?: string;
+  _uid: string;
+  component: 'GlobalConfig';
   [k: string]: any;
 }
 

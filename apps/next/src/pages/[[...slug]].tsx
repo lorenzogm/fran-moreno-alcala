@@ -1,8 +1,16 @@
-import { RenderPage, SectionsProps, Story, useStoryblok } from '@ring/cms-storyblok';
+import {
+  GlobalConfigStoryblok,
+  RenderLayout,
+  RenderPage,
+  SectionsProps,
+  Story,
+  useStoryblok,
+} from '@ring/cms-storyblok';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { ReactElement } from 'react';
 
-import { attachContentToStory, getSectionsData, getStoryBySlug } from '../api';
+import { attachContentToStory } from '../api';
+import { getStory } from '../api/getStory';
 
 export const getStaticPaths: GetStaticPaths = () => {
   // const { data } = await Storyblok.get('cdn/links/')
@@ -48,21 +56,13 @@ export const getStaticProps: GetStaticProps = async ({ locale, locales, params, 
       notFound: true,
     };
   }
-  const slug = Array.isArray(params.slug) ? params.slug.join('/') : 'home';
 
-  const productSlug = params.slug && params.slug[0] === 'p' ? params.slug[1] : undefined;
-
-  const story = await getStoryBySlug({ slug, preview, locale });
-  const sections = await getSectionsData({ content: story.content, productSlug });
-  const content = attachContentToStory({ content: story.content, sections });
+  const { story, sections } = await getStory({ params, locale, preview });
 
   try {
     return {
       props: {
-        story: {
-          ...story,
-          content,
-        },
+        story,
         sections,
         preview,
         locale,
@@ -82,6 +82,7 @@ type CatchAllPageProps = {
   locale: string;
   story: Story;
   sections: SectionsProps;
+  config: GlobalConfigStoryblok;
 };
 
 export default function CatchAllPage({ story, sections, locale }: CatchAllPageProps): ReactElement {
@@ -92,11 +93,13 @@ export default function CatchAllPage({ story, sections, locale }: CatchAllPagePr
     story,
     preview: enableBridge,
     locale,
+    resolveRelations: ['ContentPage.layout'],
   });
 
   return (
-    // <LayoutDefault preview={false}>
-    <RenderPage content={attachContentToStory({ content, sections })} />
-    // </LayoutDefault>
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    <RenderLayout content={content.layout}>
+      <RenderPage content={attachContentToStory({ content, sections })} />
+    </RenderLayout>
   );
 }

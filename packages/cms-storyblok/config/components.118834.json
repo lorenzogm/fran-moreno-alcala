@@ -4,19 +4,23 @@
       "name": "ContentPage",
       "display_name": null,
       "created_at": "2021-07-01T03:04:11.893Z",
-      "updated_at": "2022-04-27T08:32:25.717Z",
+      "updated_at": "2022-04-29T08:53:56.743Z",
       "id": 1627132,
       "schema": {
         "layout": {
-          "type": "bloks",
+          "type": "option",
           "maximum": "1",
           "required": false,
           "restrict_components": true,
           "restrict_type": "groups",
           "component_group_whitelist": ["f1208966-4f9f-4add-ba59-c576c7b0384c"],
-          "pos": 0
+          "pos": 0,
+          "use_uuid": true,
+          "source": "internal_stories",
+          "folder_slug": "_global/layouts/",
+          "filter_content_type": "Global"
         },
-        "main": {
+        "sections": {
           "type": "bloks",
           "restrict_components": true,
           "restrict_type": "groups",
@@ -167,6 +171,85 @@
       "color": null,
       "icon": null,
       "component_group_name": "Sections"
+    },
+    {
+      "name": "Global",
+      "display_name": null,
+      "created_at": "2022-04-28T20:49:10.211Z",
+      "updated_at": "2022-04-28T20:53:24.008Z",
+      "id": 2397768,
+      "schema": {
+        "header": {
+          "type": "bloks",
+          "restrict_components": true,
+          "restrict_type": "groups",
+          "component_group_whitelist": ["463f1c70-9e1f-432e-9854-675fa1cd6c95"]
+        },
+        "footer": {
+          "type": "bloks",
+          "restrict_components": true,
+          "restrict_type": "groups",
+          "component_group_whitelist": ["463f1c70-9e1f-432e-9854-675fa1cd6c95"]
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": true,
+      "preview_tmpl": null,
+      "is_nestable": false,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Global",
+      "component_group_uuid": null,
+      "color": null,
+      "icon": null
+    },
+    {
+      "name": "GlobalConfig",
+      "display_name": null,
+      "created_at": "2022-04-28T13:56:52.011Z",
+      "updated_at": "2022-04-28T20:47:39.501Z",
+      "id": 2396399,
+      "schema": {
+        "tab-8e92f69a-4d90-46ed-bba8-27a0ac5fcf45": {
+          "type": "tab",
+          "display_name": "SEO",
+          "keys": [
+            "meta_description",
+            "meta_keywords",
+            "og_image",
+            "metaTitle",
+            "metaDescription",
+            "metaOpenGraphImage",
+            "favicon"
+          ],
+          "pos": 1
+        },
+        "metaTitle": {
+          "type": "text"
+        },
+        "metaDescription": {
+          "type": "text"
+        },
+        "metaOpenGraphImage": {
+          "type": "asset",
+          "filetypes": ["images"]
+        },
+        "favicon": {
+          "type": "text"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": true,
+      "preview_tmpl": null,
+      "is_nestable": false,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "GlobalConfig",
+      "component_group_uuid": null,
+      "color": null,
+      "icon": null
     },
     {
       "name": "HeaderV1",
