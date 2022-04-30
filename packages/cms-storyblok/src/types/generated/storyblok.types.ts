@@ -1,6 +1,21 @@
+export interface CarouselV1Storyblok {
+  images?: {
+    alt?: string;
+    copyright?: string;
+    id: number;
+    filename: string;
+    name: string;
+    title?: string;
+  }[];
+  _uid: string;
+  component: 'CarouselV1';
+  [k: string]: any;
+}
+
 export interface ContentPageStoryblok {
   layout?: string;
   sections?: (
+    | CarouselV1Storyblok
     | FeaturesV1Storyblok
     | FooterV1Storyblok
     | HeaderV1Storyblok
@@ -16,6 +31,7 @@ export interface ContentPageStoryblok {
 
 export interface DefaultLayoutStoryblok {
   header?: (
+    | CarouselV1Storyblok
     | FeaturesV1Storyblok
     | FooterV1Storyblok
     | HeaderV1Storyblok
@@ -25,6 +41,7 @@ export interface DefaultLayoutStoryblok {
     | ProductDetailV1Storyblok
   )[];
   footer?: (
+    | CarouselV1Storyblok
     | FeaturesV1Storyblok
     | FooterV1Storyblok
     | HeaderV1Storyblok
@@ -64,6 +81,7 @@ export interface FooterV1Storyblok {
 
 export interface GlobalStoryblok {
   header?: (
+    | CarouselV1Storyblok
     | FeaturesV1Storyblok
     | FooterV1Storyblok
     | HeaderV1Storyblok
@@ -73,6 +91,7 @@ export interface GlobalStoryblok {
     | ProductDetailV1Storyblok
   )[];
   footer?: (
+    | CarouselV1Storyblok
     | FeaturesV1Storyblok
     | FooterV1Storyblok
     | HeaderV1Storyblok

@@ -1,6 +1,31 @@
 {
   "components": [
     {
+      "name": "CarouselV1",
+      "display_name": null,
+      "created_at": "2022-04-30T17:15:13.165Z",
+      "updated_at": "2022-04-30T17:15:37.321Z",
+      "id": 2401426,
+      "schema": {
+        "images": {
+          "type": "multiasset",
+          "filetypes": ["images"]
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "CarouselV1",
+      "component_group_uuid": "463f1c70-9e1f-432e-9854-675fa1cd6c95",
+      "color": null,
+      "icon": null,
+      "component_group_name": "Sections"
+    },
+    {
       "name": "ContentPage",
       "display_name": null,
       "created_at": "2021-07-01T03:04:11.893Z",
