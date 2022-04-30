@@ -47,7 +47,7 @@
     "babel-loader": "8.2.5",
     "eslint": "8.14.0",
     "eslint-plugin-storybook": "0.5.11",
-    "tsup": "5.12.5",
+    "tsup": "5.12.6",
     "typescript": "4.6.4",
     "webpack": "5.72.0"
   }

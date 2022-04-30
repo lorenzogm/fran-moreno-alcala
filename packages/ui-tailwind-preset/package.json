@@ -24,7 +24,7 @@
     "@ring/config-typescript": "*",
     "@ring/ui-design-tokens": "*",
     "eslint": "8.14.0",
-    "tsup": "5.12.5",
+    "tsup": "5.12.6",
     "typescript": "4.6.4"
   }
 }
