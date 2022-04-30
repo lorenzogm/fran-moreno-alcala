@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@ring/ui-tailwind": "*",
-    "@types/react": "17.0.13",
+    "@types/react": "17.0.44",
     "@types/react-dom": "17.0.8",
     "axios": "0.26.1",
     "crypto": "1.0.1",
