@@ -34,7 +34,7 @@
     "@ring/config-jest": "*",
     "@ring/config-typescript": "*",
     "babel-loader": "8.2.5",
-    "eslint": "8.13.0",
+    "eslint": "8.14.0",
     "tsup": "5.12.5",
     "typescript": "4.6.3"
   }
