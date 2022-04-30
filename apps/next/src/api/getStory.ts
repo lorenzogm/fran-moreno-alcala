@@ -26,7 +26,7 @@ export async function getStory({ params, preview, locale }: GetStory): Promise<{
   ]);
 
   const sections: Array<string> = [
-    ...story.content.sections.map((section: SectionsProps) => section.component),
+    ...(story.content.sections ? story.content.sections.map((section: SectionsProps) => section.component) : []),
     // ...config.content.footer.map((section: SectionsProps) => section.component),
     // ...config.content.header.map((section: SectionsProps) => section.component),
   ];

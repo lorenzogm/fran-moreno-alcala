@@ -11,23 +11,27 @@ const Layouts = {
 };
 
 type RenderLayoutProps = {
-  content: Layouts;
+  layout: Layouts;
   children: ReactNode;
 };
 
-export function RenderLayout({ content, children }: RenderLayoutProps): ReactElement {
+export function RenderLayout({ layout, children }: RenderLayoutProps): ReactElement {
+  if (layout === undefined) {
+    return <p>Please add a layout</p>;
+  }
+
   // @ts-expect-error instead of "content.component" (as defined by Storyblok), it's "content.name"
-  const Layout = Layouts[content.name || 'DefaultLayout'];
+  const Layout = Layouts[layout.name || 'DefaultLayout'];
 
   return (
     <StoryblokReact
-      key={content._uid}
+      key={layout._uid}
       // eslint-disable-next-line no-underscore-dangle
-      content={content}
+      content={layout}
     >
       <Layout
         // eslint-disable-next-line react/jsx-props-no-spreading
-        {...content}
+        {...layout}
       >
         {children}
       </Layout>

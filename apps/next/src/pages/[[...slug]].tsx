@@ -98,7 +98,7 @@ export default function CatchAllPage({ story, sections, locale }: CatchAllPagePr
 
   return (
     // eslint-disable-next-line react/jsx-props-no-spreading
-    <RenderLayout content={content.layout}>
+    <RenderLayout layout={content.layout}>
       <RenderPage content={attachContentToStory({ content, sections })} />
     </RenderLayout>
   );
