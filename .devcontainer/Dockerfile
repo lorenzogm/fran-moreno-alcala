@@ -1,4 +1,4 @@
-FROM node:17.5.0-alpine
+FROM node:17.9.0-alpine
 
 # Ensure this docker file is built by VScode.
 # Manual / user build of this Dockerfile is NOT supported.
