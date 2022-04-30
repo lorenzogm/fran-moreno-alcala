@@ -1,10 +1,13 @@
 import { StoryblokLink } from '../types';
 
 export function parseLink(link: StoryblokLink): string {
-  if (link.story && link.linktype === 'story') {
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-return
-    return link.story.url;
+  if (link.linktype === 'url') {
+    return link.url as string;
   }
 
-  return '';
+  if (link.linktype === 'story') {
+    return (link.story ? link.story.url : '/') as string;
+  }
+
+  return '/';
 }
