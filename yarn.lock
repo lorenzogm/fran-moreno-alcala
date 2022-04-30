@@ -11124,10 +11124,10 @@ react-colorful@^5.1.2:
   resolved "https://registry.npmjs.org/react-colorful/-/react-colorful-5.5.1.tgz#29d9c4e496f2ca784dd2bb5053a3a4340cfaf784"
   integrity sha512-M1TJH2X3RXEt12sWkpa6hLc/bbYS0H6F4rIqjQZ+RxNBstpY67d9TrFXtqdZwhpmBXcCwEi7stKqFue3ZRkiOg==
 
-react-daisyui@2.0.0:
-  version "2.0.0"
-  resolved "https://registry.npmjs.org/react-daisyui/-/react-daisyui-2.0.0.tgz#82b635171fbe887d5f0e75b4c2428c5d55160717"
-  integrity sha512-XMCYjf+NJRQEipeR7ViQBGNKjbwigeUmMRHt2o17lQiT80pRu/IrS3ORH4frPzFZQ0lG6uroJ1P3v69hOf+zpA==
+react-daisyui@2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/react-daisyui/-/react-daisyui-2.0.1.tgz#893f3e382715dd2243d34971a42b1c54a891808e"
+  integrity sha512-1JRJnkkyaPsCdMrZi5Zt6OD4hZ+x/3aMX/+T1wydq5WkpE9TTIQ4804andipsVrjzMhQ0Uc9INOvkTg8V23Zug==
 
 react-docgen-typescript@^2.0.0:
   version "2.2.2"
