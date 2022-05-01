@@ -23,6 +23,8 @@ export interface ContentPageStoryblok {
     | HeroV2Storyblok
     | NavigationV1Storyblok
     | ProductDetailV1Storyblok
+    | ProductListV1Storyblok
+    | VideoV1Storyblok
   )[];
   _uid: string;
   component: 'ContentPage';
@@ -39,6 +41,8 @@ export interface DefaultLayoutStoryblok {
     | HeroV2Storyblok
     | NavigationV1Storyblok
     | ProductDetailV1Storyblok
+    | ProductListV1Storyblok
+    | VideoV1Storyblok
   )[];
   footer?: (
     | CarouselV1Storyblok
@@ -49,6 +53,8 @@ export interface DefaultLayoutStoryblok {
     | HeroV2Storyblok
     | NavigationV1Storyblok
     | ProductDetailV1Storyblok
+    | ProductListV1Storyblok
+    | VideoV1Storyblok
   )[];
   _uid: string;
   component: 'DefaultLayout';
@@ -89,6 +95,8 @@ export interface GlobalStoryblok {
     | HeroV2Storyblok
     | NavigationV1Storyblok
     | ProductDetailV1Storyblok
+    | ProductListV1Storyblok
+    | VideoV1Storyblok
   )[];
   footer?: (
     | CarouselV1Storyblok
@@ -99,6 +107,8 @@ export interface GlobalStoryblok {
     | HeroV2Storyblok
     | NavigationV1Storyblok
     | ProductDetailV1Storyblok
+    | ProductListV1Storyblok
+    | VideoV1Storyblok
   )[];
   _uid: string;
   component: 'Global';
@@ -276,5 +286,26 @@ export interface NavigationV1Storyblok {
 export interface ProductDetailV1Storyblok {
   _uid: string;
   component: 'ProductDetailV1';
+  [k: string]: any;
+}
+
+export interface ProductListV1Storyblok {
+  title?: string;
+  _uid: string;
+  component: 'ProductListV1';
+  [k: string]: any;
+}
+
+export interface VideoV1Storyblok {
+  video?: {
+    alt?: string;
+    copyright?: string;
+    id: number;
+    filename: string;
+    name: string;
+    title?: string;
+  };
+  _uid: string;
+  component: 'VideoV1';
   [k: string]: any;
 }

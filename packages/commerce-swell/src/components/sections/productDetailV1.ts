@@ -1,9 +1,7 @@
 // @ts-expect-error swell-node doesn't provide types
 import swell from 'swell-node';
 
-type Product = {
-  id: string;
-};
+import { ProductSwell } from '../../types';
 
 type FetchProductDetailV1DataProps = {
   productSlug: string;
@@ -11,7 +9,7 @@ type FetchProductDetailV1DataProps = {
 
 export async function fetchProductDetailV1Data({
   productSlug,
-}: FetchProductDetailV1DataProps): Promise<{ product?: Product }> {
+}: FetchProductDetailV1DataProps): Promise<{ product?: ProductSwell }> {
   if (productSlug === undefined) {
     return {};
   }
@@ -26,5 +24,5 @@ export async function fetchProductDetailV1Data({
 
   const [product] = r.results;
 
-  return { product } as { product: Product };
+  return { product } as { product: ProductSwell };
 }

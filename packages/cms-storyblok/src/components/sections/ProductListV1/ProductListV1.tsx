@@ -1,0 +1,36 @@
+import type { ProductSwell } from '@ring/commerce-swell';
+import { ProductListV1 as ProductListV1UI } from '@ring/ui-tailwind';
+import React, { ReactElement } from 'react';
+
+import { ProductListV1Storyblok } from '../../../types';
+
+type ProductListV1Props = ProductListV1Storyblok & {
+  products: Array<ProductSwell>;
+};
+export function ProductListV1({ title, products }: ProductListV1Props): ReactElement {
+  return (
+    <ProductListV1UI
+      products={products.map((product) => {
+        if (!product.images) {
+          // eslint-disable-next-line
+          console.warn(`Undefined image for product with slug "${product.slug}"`);
+        }
+        return {
+          name: product.name,
+          slug: product.slug,
+          price: product.price,
+          currency: product.currency,
+          images: product.images
+            ? product.images.map((image) => {
+                return {
+                  src: image.file.url,
+                  alt: '',
+                };
+              })
+            : [{ src: 'https://via.placeholder.com/1024', alt: 'Placeholder' }],
+        };
+      })}
+      title={title}
+    />
+  );
+}

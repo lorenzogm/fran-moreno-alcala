@@ -20,6 +20,7 @@
     "tsup": "tsup src/index.ts --format esm,cjs --dts --external react"
   },
   "dependencies": {
+    "@ring/commerce-swell": "*",
     "@ring/ui-tailwind": "*",
     "@types/react": "17.0.44",
     "@types/react-dom": "17.0.16",

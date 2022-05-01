@@ -48,6 +48,7 @@
     "@storybook/manager-webpack5": "6.4.22",
     "@storybook/react": "6.4.22",
     "@storybook/testing-react": "1.2.4",
+    "@tailwindcss/aspect-ratio": "0.4.0",
     "@tailwindcss/typography": "0.5.2",
     "@testing-library/react": "13.1.1",
     "autoprefixer": "10.4.5",
