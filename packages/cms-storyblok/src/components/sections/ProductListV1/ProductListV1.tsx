@@ -15,19 +15,21 @@ export function ProductListV1({ title, products }: ProductListV1Props): ReactEle
           // eslint-disable-next-line
           console.warn(`Undefined image for product with slug "${product.slug}"`);
         }
+
         return {
           name: product.name,
           slug: product.slug,
           price: product.price,
           currency: product.currency,
-          images: product.images
-            ? product.images.map((image) => {
-                return {
-                  src: image.file.url,
-                  alt: '',
-                };
-              })
-            : [{ src: 'https://via.placeholder.com/1024', alt: 'Placeholder' }],
+          images:
+            product.images.length === 0
+              ? [{ src: 'https://via.placeholder.com/1024', alt: 'Placeholder' }]
+              : product.images.map((image) => {
+                  return {
+                    src: image.file.url,
+                    alt: '',
+                  };
+                }),
         };
       })}
       title={title}

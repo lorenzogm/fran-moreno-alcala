@@ -8,7 +8,6 @@ export async function fetchProductListV1Data(): Promise<{ products: Array<Produc
 
   const r = await swell.get(`/products`, {
     where: { active: true },
-    page: 1,
   });
 
   const products = r.results;
