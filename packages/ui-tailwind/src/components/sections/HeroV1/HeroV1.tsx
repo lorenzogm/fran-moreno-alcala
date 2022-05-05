@@ -1,7 +1,6 @@
 import { Popover, Transition } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import React, { Fragment } from 'react';
-import { Button } from 'react-daisyui';
 
 export type HeroV1Props = {
   buttonPrimaryLink: string;
@@ -139,14 +138,20 @@ export function HeroV1({
               </p>
               <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                 <div className="rounded-md shadow">
-                  <Button color="primary" href={buttonPrimaryLink}>
+                  <a
+                    className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 md:py-4 md:px-10 md:text-lg"
+                    href={buttonPrimaryLink}
+                  >
                     {buttonPrimaryText}
-                  </Button>
+                  </a>
                 </div>
                 <div className="mt-3 sm:mt-0 sm:ml-3">
-                  <Button color="secondary" href={buttonSecondaryLink}>
+                  <a
+                    className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-100 px-8 py-3 text-base font-medium text-indigo-700 hover:bg-indigo-200 md:py-4 md:px-10 md:text-lg"
+                    href={buttonSecondaryLink}
+                  >
                     {buttonSecondaryText}
-                  </Button>
+                  </a>
                 </div>
               </div>
             </div>

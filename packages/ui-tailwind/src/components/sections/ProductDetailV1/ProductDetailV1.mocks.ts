@@ -1,4 +1,6 @@
-export const ProductDetailV1Mock = {
+import { ProductDetailV1Props } from './ProductDetailV1';
+
+export const ProductDetailV1Mock: ProductDetailV1Props = {
   product: {
     name: 'Product name',
     price: '20',

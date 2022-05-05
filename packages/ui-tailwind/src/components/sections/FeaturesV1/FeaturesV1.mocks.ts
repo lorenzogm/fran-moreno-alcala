@@ -1,4 +1,6 @@
-export const FeaturesV1Mock = {
+import { FeaturesV1Props } from './FeaturesV1';
+
+export const FeaturesV1Mock: FeaturesV1Props = {
   title: 'A better way to send money',
   pretitle: 'Transactions',
   subtitle:

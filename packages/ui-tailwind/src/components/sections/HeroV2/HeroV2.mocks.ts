@@ -1,4 +1,6 @@
-export const HeroV2Mock = {
+import { HeroV2Props } from './HeroV2';
+
+export const HeroV2Mock: HeroV2Props = {
   image: {
     src: 'https://api.lorem.space/image/fashion?w=1000&h=800',
     alt: '',

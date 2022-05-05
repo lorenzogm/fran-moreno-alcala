@@ -1,4 +1,6 @@
-export const HeroV1Mock = {
+import { HeroV1Props } from './HeroV1';
+
+export const HeroV1Mock: HeroV1Props = {
   titleFirstRow: 'Data to enrich your',
   titleSecondRow: 'online business',
   subtitle:

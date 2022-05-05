@@ -1,4 +1,6 @@
-export const NavigationV1Mock = {
+import { NavigationV1Props } from './NavigationV1';
+
+export const NavigationV1Mock: NavigationV1Props = {
   title: 'Ring',
   navigation: [
     {
