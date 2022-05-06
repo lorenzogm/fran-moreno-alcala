@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navbar } from 'react-daisyui';
 
-export type NavigationV1Props = {
+export type HeaderV2Props = {
   navigation: Array<Link>;
   title?: string;
 };
@@ -11,7 +11,7 @@ type Link = {
   href: string;
 };
 
-export function NavigationV1({ title, navigation }: NavigationV1Props) {
+export function HeaderV2({ title, navigation }: HeaderV2Props) {
   return (
     <Navbar className="navbar bg-neutral text-neutral-content shadow-lg">
       <Navbar.Start className="navbar-start mx-2 px-2">

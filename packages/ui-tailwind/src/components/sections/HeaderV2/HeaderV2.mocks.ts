@@ -1,6 +1,6 @@
-import { NavigationV1Props } from './NavigationV1';
+import { HeaderV2Props } from './HeaderV2';
 
-export const NavigationV1Mock: NavigationV1Props = {
+export const HeaderV2Mock: HeaderV2Props = {
   title: 'Ring',
   navigation: [
     {

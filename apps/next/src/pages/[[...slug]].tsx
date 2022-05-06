@@ -56,10 +56,9 @@ export const getStaticProps: GetStaticProps = async ({ locale, locales, params, 
       notFound: true,
     };
   }
-
-  const { story, sections } = await getStory({ params, locale, preview });
-
   try {
+    const { story, sections } = await getStory({ params, locale, preview });
+
     return {
       props: {
         story,

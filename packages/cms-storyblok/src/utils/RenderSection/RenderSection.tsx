@@ -3,14 +3,15 @@ import StoryblokReact from 'storyblok-react';
 
 import { CarouselV1 } from '../../components/sections/CarouselV1';
 import { FeaturesV1 } from '../../components/sections/FeaturesV1';
+import { HeaderV2 } from '../../components/sections/HeaderV2';
 import { HeroV1 } from '../../components/sections/HeroV1';
 import { HeroV2 } from '../../components/sections/HeroV2';
-import { NavigationV1 } from '../../components/sections/NavigationV1';
 import { ProductDetailV1 } from '../../components/sections/ProductDetailV1';
 import { ProductListV1 } from '../../components/sections/ProductListV1';
 import type {
   CarouselV1Storyblok,
   FeaturesV1Storyblok,
+  HeaderV2Storyblok,
   HeroV1Storyblok,
   HeroV2Storyblok,
   ProductDetailV1Storyblok,
@@ -22,6 +23,7 @@ export type SectionsProps =
   | CarouselV1Storyblok
   | HeroV1Storyblok
   | HeroV2Storyblok
+  | HeaderV2Storyblok
   | FeaturesV1Storyblok
   | ProductDetailV1Storyblok
   | ProductListV1Storyblok;
@@ -31,7 +33,7 @@ const Sections = {
   HeroV1,
   HeroV2,
   FeaturesV1,
-  NavigationV1,
+  HeaderV2,
   ProductDetailV1,
   ProductListV1,
 };

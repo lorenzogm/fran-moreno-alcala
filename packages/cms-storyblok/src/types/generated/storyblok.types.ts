@@ -1,3 +1,11 @@
+export interface BlogPostV1Storyblok {
+  title?: string;
+  body?: any;
+  _uid: string;
+  component: 'BlogPostV1';
+  [k: string]: any;
+}
+
 export interface CarouselV1Storyblok {
   images?: {
     alt?: string;
@@ -15,13 +23,14 @@ export interface CarouselV1Storyblok {
 export interface ContentPageStoryblok {
   layout?: string;
   sections?: (
+    | BlogPostV1Storyblok
     | CarouselV1Storyblok
     | FeaturesV1Storyblok
     | FooterV1Storyblok
     | HeaderV1Storyblok
+    | HeaderV2Storyblok
     | HeroV1Storyblok
     | HeroV2Storyblok
-    | NavigationV1Storyblok
     | ProductDetailV1Storyblok
     | ProductListV1Storyblok
     | VideoV1Storyblok
@@ -33,25 +42,27 @@ export interface ContentPageStoryblok {
 
 export interface DefaultLayoutStoryblok {
   header?: (
+    | BlogPostV1Storyblok
     | CarouselV1Storyblok
     | FeaturesV1Storyblok
     | FooterV1Storyblok
     | HeaderV1Storyblok
+    | HeaderV2Storyblok
     | HeroV1Storyblok
     | HeroV2Storyblok
-    | NavigationV1Storyblok
     | ProductDetailV1Storyblok
     | ProductListV1Storyblok
     | VideoV1Storyblok
   )[];
   footer?: (
+    | BlogPostV1Storyblok
     | CarouselV1Storyblok
     | FeaturesV1Storyblok
     | FooterV1Storyblok
     | HeaderV1Storyblok
+    | HeaderV2Storyblok
     | HeroV1Storyblok
     | HeroV2Storyblok
-    | NavigationV1Storyblok
     | ProductDetailV1Storyblok
     | ProductListV1Storyblok
     | VideoV1Storyblok
@@ -87,25 +98,27 @@ export interface FooterV1Storyblok {
 
 export interface GlobalStoryblok {
   header?: (
+    | BlogPostV1Storyblok
     | CarouselV1Storyblok
     | FeaturesV1Storyblok
     | FooterV1Storyblok
     | HeaderV1Storyblok
+    | HeaderV2Storyblok
     | HeroV1Storyblok
     | HeroV2Storyblok
-    | NavigationV1Storyblok
     | ProductDetailV1Storyblok
     | ProductListV1Storyblok
     | VideoV1Storyblok
   )[];
   footer?: (
+    | BlogPostV1Storyblok
     | CarouselV1Storyblok
     | FeaturesV1Storyblok
     | FooterV1Storyblok
     | HeaderV1Storyblok
+    | HeaderV2Storyblok
     | HeroV1Storyblok
     | HeroV2Storyblok
-    | NavigationV1Storyblok
     | ProductDetailV1Storyblok
     | ProductListV1Storyblok
     | VideoV1Storyblok
@@ -136,6 +149,14 @@ export interface HeaderV1Storyblok {
   navigation: NavigationItemStoryblok[];
   _uid: string;
   component: 'HeaderV1';
+  [k: string]: any;
+}
+
+export interface HeaderV2Storyblok {
+  title?: string;
+  navigation?: NavigationItemStoryblok[];
+  _uid: string;
+  component: 'HeaderV2';
   [k: string]: any;
 }
 
@@ -272,14 +293,6 @@ export interface NavigationItemStoryblok {
   items?: NavigationItemStoryblok[];
   _uid: string;
   component: 'NavigationItem';
-  [k: string]: any;
-}
-
-export interface NavigationV1Storyblok {
-  title?: string;
-  navigation?: NavigationItemStoryblok[];
-  _uid: string;
-  component: 'NavigationV1';
   [k: string]: any;
 }
 
