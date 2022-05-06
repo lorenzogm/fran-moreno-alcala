@@ -1,6 +1,6 @@
-import { CallsToActionV1Mock } from '../../modules/CallsToActionV1/CallsToActionV1.mocks';
 import { ListV1Mock } from '../../modules/ListV1/ListV1.mocks';
 import { ListV2Mock } from '../../modules/ListV2/ListV2.mocks';
+import { ListV3Mock } from '../../modules/ListV3/ListV3.mocks';
 import { HeaderV1Props } from './HeaderV1';
 
 export const HeaderV1Mock: HeaderV1Props = {
@@ -14,7 +14,7 @@ export const HeaderV1Mock: HeaderV1Props = {
       title: 'Solutions',
       link: '',
       items: ListV2Mock.items,
-      callsToAction: CallsToActionV1Mock,
+      callsToAction: ListV3Mock,
     },
     {
       title: 'Docs',

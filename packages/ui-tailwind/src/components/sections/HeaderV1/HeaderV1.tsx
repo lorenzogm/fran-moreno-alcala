@@ -6,12 +6,12 @@ import React, { Fragment } from 'react';
 import { Image } from '../../../types';
 import { classNames } from '../../../utils/classNames';
 import type { IconProps } from '../../elements/Icon/Icon';
-import type { CallsToActionV1Props } from '../../modules/CallsToActionV1';
-import { CallsToActionV1 } from '../../modules/CallsToActionV1';
 import type { ListV1Props } from '../../modules/ListV1';
 import { ListV1 } from '../../modules/ListV1';
 import type { ListV2Props } from '../../modules/ListV2';
 import { ListV2 } from '../../modules/ListV2';
+import type { ListV3Props } from '../../modules/ListV3';
+import { ListV3 } from '../../modules/ListV3';
 
 export type HeaderV1Props = {
   title: string;
@@ -29,7 +29,7 @@ type NavigationItem = {
   icon?: IconProps['name'];
   description?: string;
   items?: ListV2Props['items'];
-  callsToAction?: CallsToActionV1Props;
+  callsToAction?: ListV3Props;
   list?: ListV1Props;
 };
 
@@ -111,7 +111,7 @@ export function HeaderV1({
                             )}
 
                             {navigationLevelOneItem?.callsToAction && (
-                              <CallsToActionV1
+                              <ListV3
                                 // eslint-disable-next-line react/jsx-props-no-spreading
                                 {...navigationLevelOneItem.callsToAction}
                               />

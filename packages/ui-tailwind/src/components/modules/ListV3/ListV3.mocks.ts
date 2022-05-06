@@ -1,6 +1,6 @@
-import { CallsToActionV1Props } from './CallsToActionV1';
+import { ListV3Props } from './ListV3';
 
-export const CallsToActionV1Mock: CallsToActionV1Props = {
+export const ListV3Mock: ListV3Props = {
   items: [
     { title: 'Watch Demo', link: '/', icon: 'Play' },
     { title: 'Contact Sales', link: '/', icon: 'Phone' },
