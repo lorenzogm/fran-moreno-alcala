@@ -2,6 +2,7 @@ import { HeroV1 as HeroV1UI } from '@ring/ui-tailwind';
 import React, { ReactElement } from 'react';
 
 import type { HeroV1Storyblok } from '../../../types';
+import { parseImage } from '../../../utils/parseImage';
 import { parseLink } from '../../../utils/parseLink';
 
 type HeroV1Props = HeroV1Storyblok;
@@ -29,7 +30,7 @@ export function HeroV1({
       buttonPrimaryText={buttonPrimaryText}
       buttonSecondaryLink={parseLink(buttonSecondaryLink)}
       buttonSecondaryText={buttonSecondaryText}
-      image={{ src: image.filename, alt: image.alt || image.name }}
+      image={parseImage(image)}
       navigation={navigation}
       subtitle={subtitle}
       titleFirstRow={titleFirstRow}

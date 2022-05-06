@@ -72,21 +72,21 @@ export interface DefaultLayoutStoryblok {
   [k: string]: any;
 }
 
-export interface FeatureStoryblok {
-  title: string;
-  subtitle: string;
-  _uid: string;
-  component: 'Feature';
-  [k: string]: any;
-}
-
 export interface FeaturesV1Storyblok {
   pretitle: string;
   title: string;
   subtitle: string;
-  features: FeatureStoryblok[];
+  features: FeaturesV1FeatureStoryblok[];
   _uid: string;
   component: 'FeaturesV1';
+  [k: string]: any;
+}
+
+export interface FeaturesV1FeatureStoryblok {
+  title: string;
+  subtitle: string;
+  _uid: string;
+  component: 'FeaturesV1-Feature';
   [k: string]: any;
 }
 
@@ -146,17 +146,69 @@ export interface GlobalConfigStoryblok {
 }
 
 export interface HeaderV1Storyblok {
-  navigation: NavigationItemStoryblok[];
+  title: string;
+  logo: {
+    alt?: string;
+    copyright?: string;
+    id: number;
+    filename: string;
+    name: string;
+    title?: string;
+  };
+  navigation: HeaderV1NavigationItemStoryblok[];
+  primaryButtonLink: ContentPageStoryblok[];
+  primaryButtonTitle: string;
+  secondaryButtonLink: ContentPageStoryblok[];
+  secondaryButtonTitle: string;
   _uid: string;
   component: 'HeaderV1';
   [k: string]: any;
 }
 
+export interface HeaderV1NavigationItemStoryblok {
+  title: string;
+  link: ContentPageStoryblok[];
+  _uid: string;
+  component: 'HeaderV1-NavigationItem';
+  [k: string]: any;
+}
+
 export interface HeaderV2Storyblok {
   title?: string;
-  navigation?: NavigationItemStoryblok[];
+  navigation?: HeaderV2NavigationItemStoryblok[];
   _uid: string;
   component: 'HeaderV2';
+  [k: string]: any;
+}
+
+export interface HeaderV2NavigationItemStoryblok {
+  title: string;
+  link?:
+    | {
+        cached_url?: string;
+        linktype?: string;
+        [k: string]: any;
+      }
+    | {
+        id?: string;
+        cached_url?: string;
+        linktype?: 'story';
+        [k: string]: any;
+      }
+    | {
+        url?: string;
+        cached_url?: string;
+        linktype?: 'asset' | 'url';
+        [k: string]: any;
+      }
+    | {
+        email?: string;
+        linktype?: 'email';
+        [k: string]: any;
+      };
+  items?: HeaderV2NavigationItemStoryblok[];
+  _uid: string;
+  component: 'HeaderV2-NavigationItem';
   [k: string]: any;
 }
 
@@ -262,37 +314,6 @@ export interface HeroV2Storyblok {
   };
   _uid: string;
   component: 'HeroV2';
-  [k: string]: any;
-}
-
-export interface NavigationItemStoryblok {
-  title: string;
-  link?:
-    | {
-        cached_url?: string;
-        linktype?: string;
-        [k: string]: any;
-      }
-    | {
-        id?: string;
-        cached_url?: string;
-        linktype?: 'story';
-        [k: string]: any;
-      }
-    | {
-        url?: string;
-        cached_url?: string;
-        linktype?: 'asset' | 'url';
-        [k: string]: any;
-      }
-    | {
-        email?: string;
-        linktype?: 'email';
-        [k: string]: any;
-      };
-  items?: NavigationItemStoryblok[];
-  _uid: string;
-  component: 'NavigationItem';
   [k: string]: any;
 }
 

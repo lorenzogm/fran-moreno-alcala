@@ -33,3 +33,12 @@ export type StoryblokLink =
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       [k: string]: any;
     };
+
+export type StoryblokImage = {
+  alt?: string;
+  copyright?: string;
+  id: number;
+  filename: string;
+  name: string;
+  title?: string;
+};
