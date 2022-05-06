@@ -6,7 +6,7 @@ import { HeaderV2 as HeaderV2UI } from './HeaderV2';
 import { HeaderV2Mock } from './HeaderV2.mocks';
 
 export default {
-  title: 'Sections/Navigation',
+  title: 'Sections/Header',
   component: HeaderV2UI,
 } as Meta;
 
