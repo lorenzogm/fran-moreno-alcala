@@ -155,21 +155,118 @@ export interface HeaderV1Storyblok {
     name: string;
     title?: string;
   };
-  navigation: HeaderV1NavigationItemStoryblok[];
-  primaryButtonLink: ContentPageStoryblok[];
+  navigation: HeaderV1NavigationItemLevelOneStoryblok[];
+  primaryButtonLink:
+    | {
+        cached_url?: string;
+        linktype?: string;
+        [k: string]: any;
+      }
+    | {
+        id?: string;
+        cached_url?: string;
+        linktype?: 'story';
+        [k: string]: any;
+      }
+    | {
+        url?: string;
+        cached_url?: string;
+        linktype?: 'asset' | 'url';
+        [k: string]: any;
+      }
+    | {
+        email?: string;
+        linktype?: 'email';
+        [k: string]: any;
+      };
   primaryButtonTitle: string;
-  secondaryButtonLink: ContentPageStoryblok[];
+  secondaryButtonLink:
+    | {
+        cached_url?: string;
+        linktype?: string;
+        [k: string]: any;
+      }
+    | {
+        id?: string;
+        cached_url?: string;
+        linktype?: 'story';
+        [k: string]: any;
+      }
+    | {
+        url?: string;
+        cached_url?: string;
+        linktype?: 'asset' | 'url';
+        [k: string]: any;
+      }
+    | {
+        email?: string;
+        linktype?: 'email';
+        [k: string]: any;
+      };
   secondaryButtonTitle: string;
   _uid: string;
   component: 'HeaderV1';
   [k: string]: any;
 }
 
-export interface HeaderV1NavigationItemStoryblok {
+export interface HeaderV1NavigationItemLevelOneStoryblok {
   title: string;
-  link: ContentPageStoryblok[];
+  link:
+    | {
+        cached_url?: string;
+        linktype?: string;
+        [k: string]: any;
+      }
+    | {
+        id?: string;
+        cached_url?: string;
+        linktype?: 'story';
+        [k: string]: any;
+      }
+    | {
+        url?: string;
+        cached_url?: string;
+        linktype?: 'asset' | 'url';
+        [k: string]: any;
+      }
+    | {
+        email?: string;
+        linktype?: 'email';
+        [k: string]: any;
+      };
+  items?: any[];
   _uid: string;
-  component: 'HeaderV1-NavigationItem';
+  component: 'HeaderV1-NavigationItemLevelOne';
+  [k: string]: any;
+}
+
+export interface HeaderV1NavigationItemLevelTwoStoryblok {
+  title: string;
+  link:
+    | {
+        cached_url?: string;
+        linktype?: string;
+        [k: string]: any;
+      }
+    | {
+        id?: string;
+        cached_url?: string;
+        linktype?: 'story';
+        [k: string]: any;
+      }
+    | {
+        url?: string;
+        cached_url?: string;
+        linktype?: 'asset' | 'url';
+        [k: string]: any;
+      }
+    | {
+        email?: string;
+        linktype?: 'email';
+        [k: string]: any;
+      };
+  _uid: string;
+  component: 'HeaderV1-NavigationItemLevelTwo';
   [k: string]: any;
 }
 
@@ -331,7 +428,7 @@ export interface ProductListV1Storyblok {
 }
 
 export interface VideoV1Storyblok {
-  video?: {
+  video: {
     alt?: string;
     copyright?: string;
     id: number;
@@ -339,6 +436,7 @@ export interface VideoV1Storyblok {
     name: string;
     title?: string;
   };
+  autoPlay: boolean;
   _uid: string;
   component: 'VideoV1';
   [k: string]: any;

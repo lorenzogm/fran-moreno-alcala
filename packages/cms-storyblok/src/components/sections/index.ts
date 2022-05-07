@@ -5,3 +5,4 @@ export * from './HeroV1';
 export * from './HeroV2';
 export * from './ProductDetailV1';
 export * from './ProductListV1';
+export * from './VideoV1';

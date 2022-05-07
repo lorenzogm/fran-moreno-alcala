@@ -9,6 +9,7 @@ import { HeroV1 } from '../../components/sections/HeroV1';
 import { HeroV2 } from '../../components/sections/HeroV2';
 import { ProductDetailV1 } from '../../components/sections/ProductDetailV1';
 import { ProductListV1 } from '../../components/sections/ProductListV1';
+import { VideoV1 } from '../../components/sections/VideoV1';
 import type {
   CarouselV1Storyblok,
   FeaturesV1Storyblok,
@@ -18,6 +19,7 @@ import type {
   HeroV2Storyblok,
   ProductDetailV1Storyblok,
   ProductListV1Storyblok,
+  VideoV1Storyblok,
 } from '../../types';
 import { Placeholder } from '../Placeholder';
 
@@ -29,7 +31,8 @@ export type SectionsProps =
   | HeaderV2Storyblok
   | FeaturesV1Storyblok
   | ProductDetailV1Storyblok
-  | ProductListV1Storyblok;
+  | ProductListV1Storyblok
+  | VideoV1Storyblok;
 
 const Sections = {
   CarouselV1,
@@ -40,6 +43,7 @@ const Sections = {
   HeaderV2,
   ProductDetailV1,
   ProductListV1,
+  VideoV1,
 };
 
 type RenderSectionProps = {
