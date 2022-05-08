@@ -3,7 +3,7 @@ import React from 'react';
 import { Video } from '../../../types';
 
 export type VideoV1Props = {
-  autoPlay: boolean;
+  autoPlay?: boolean;
   video: Video;
 };
 
