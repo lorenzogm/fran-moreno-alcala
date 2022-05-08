@@ -1,7 +1,7 @@
-import { fetchProductDetailV1Data } from './productDetailV1';
+import { fetchProductDetailV3Data } from './productDetailV3';
 import { fetchProductListV1Data } from './productListV1';
 
 export const sectionFetcherMapping = {
-  ProductDetailV1: fetchProductDetailV1Data,
+  ProductDetailV3: fetchProductDetailV3Data,
   ProductListV1: fetchProductListV1Data,
 };

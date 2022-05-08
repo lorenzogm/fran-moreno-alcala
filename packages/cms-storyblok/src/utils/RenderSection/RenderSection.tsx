@@ -7,7 +7,7 @@ import { HeaderV1 } from '../../components/sections/HeaderV1';
 import { HeaderV2 } from '../../components/sections/HeaderV2';
 import { HeroV1 } from '../../components/sections/HeroV1';
 import { HeroV2 } from '../../components/sections/HeroV2';
-import { ProductDetailV1 } from '../../components/sections/ProductDetailV1';
+import { ProductDetailV3 } from '../../components/sections/ProductDetailV3';
 import { ProductListV1 } from '../../components/sections/ProductListV1';
 import { VideoV1 } from '../../components/sections/VideoV1';
 import type {
@@ -17,7 +17,7 @@ import type {
   HeaderV2Storyblok,
   HeroV1Storyblok,
   HeroV2Storyblok,
-  ProductDetailV1Storyblok,
+  ProductDetailV3Storyblok,
   ProductListV1Storyblok,
   VideoV1Storyblok,
 } from '../../types';
@@ -30,7 +30,7 @@ export type SectionsProps =
   | HeaderV1Storyblok
   | HeaderV2Storyblok
   | FeaturesV1Storyblok
-  | ProductDetailV1Storyblok
+  | ProductDetailV3Storyblok
   | ProductListV1Storyblok
   | VideoV1Storyblok;
 
@@ -41,7 +41,7 @@ const Sections = {
   FeaturesV1,
   HeaderV1,
   HeaderV2,
-  ProductDetailV1,
+  ProductDetailV3,
   ProductListV1,
   VideoV1,
 };

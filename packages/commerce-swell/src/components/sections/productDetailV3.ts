@@ -3,13 +3,13 @@ import swell from 'swell-node';
 
 import { ProductSwell } from '../../types';
 
-type FetchProductDetailV1DataProps = {
+type FetchProductDetailV3DataProps = {
   productSlug: string;
 };
 
-export async function fetchProductDetailV1Data({
+export async function fetchProductDetailV3Data({
   productSlug,
-}: FetchProductDetailV1DataProps): Promise<{ product?: ProductSwell }> {
+}: FetchProductDetailV3DataProps): Promise<{ product?: ProductSwell }> {
   if (productSlug === undefined) {
     return {};
   }

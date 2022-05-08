@@ -31,7 +31,7 @@ export interface ContentPageStoryblok {
     | HeaderV2Storyblok
     | HeroV1Storyblok
     | HeroV2Storyblok
-    | ProductDetailV1Storyblok
+    | ProductDetailV3Storyblok
     | ProductListV1Storyblok
     | VideoV1Storyblok
   )[];
@@ -50,7 +50,7 @@ export interface DefaultLayoutStoryblok {
     | HeaderV2Storyblok
     | HeroV1Storyblok
     | HeroV2Storyblok
-    | ProductDetailV1Storyblok
+    | ProductDetailV3Storyblok
     | ProductListV1Storyblok
     | VideoV1Storyblok
   )[];
@@ -63,7 +63,7 @@ export interface DefaultLayoutStoryblok {
     | HeaderV2Storyblok
     | HeroV1Storyblok
     | HeroV2Storyblok
-    | ProductDetailV1Storyblok
+    | ProductDetailV3Storyblok
     | ProductListV1Storyblok
     | VideoV1Storyblok
   )[];
@@ -106,7 +106,7 @@ export interface GlobalStoryblok {
     | HeaderV2Storyblok
     | HeroV1Storyblok
     | HeroV2Storyblok
-    | ProductDetailV1Storyblok
+    | ProductDetailV3Storyblok
     | ProductListV1Storyblok
     | VideoV1Storyblok
   )[];
@@ -119,7 +119,7 @@ export interface GlobalStoryblok {
     | HeaderV2Storyblok
     | HeroV1Storyblok
     | HeroV2Storyblok
-    | ProductDetailV1Storyblok
+    | ProductDetailV3Storyblok
     | ProductListV1Storyblok
     | VideoV1Storyblok
   )[];
@@ -140,6 +140,7 @@ export interface GlobalConfigStoryblok {
     title?: string;
   };
   favicon?: string;
+  revalidate: number;
   _uid: string;
   component: 'GlobalConfig';
   [k: string]: any;
@@ -414,9 +415,9 @@ export interface HeroV2Storyblok {
   [k: string]: any;
 }
 
-export interface ProductDetailV1Storyblok {
+export interface ProductDetailV3Storyblok {
   _uid: string;
-  component: 'ProductDetailV1';
+  component: 'ProductDetailV3';
   [k: string]: any;
 }
 
