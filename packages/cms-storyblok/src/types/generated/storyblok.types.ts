@@ -437,7 +437,7 @@ export interface VideoV1Storyblok {
     name: string;
     title?: string;
   };
-  autoPlay: boolean;
+  autoPlay?: boolean;
   _uid: string;
   component: 'VideoV1';
   [k: string]: any;

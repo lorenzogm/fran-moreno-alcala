@@ -672,7 +672,7 @@
       "name": "VideoV1",
       "display_name": null,
       "created_at": "2022-05-01T11:31:38.539Z",
-      "updated_at": "2022-05-07T20:26:08.846Z",
+      "updated_at": "2022-05-08T20:51:25.720Z",
       "id": 2402282,
       "schema": {
         "video": {
@@ -682,7 +682,7 @@
         },
         "autoPlay": {
           "type": "boolean",
-          "required": true
+          "required": false
         }
       },
       "image": null,
