@@ -1,6 +1,11 @@
 import { HeroV1Props } from './HeroV1';
 
 export const HeroV1Mock: HeroV1Props = {
+  title: 'Ring',
+  logo: {
+    src: 'https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg',
+    alt: 'Ring Logo',
+  },
   titleFirstRow: 'Data to enrich your',
   titleSecondRow: 'online business',
   subtitle:
@@ -10,10 +15,10 @@ export const HeroV1Mock: HeroV1Props = {
     alt: '',
   },
   navigation: [
-    { text: 'Product', link: '#' },
-    { text: 'Features', link: '#' },
-    { text: 'Marketplace', link: '#' },
-    { text: 'Company', link: '#' },
+    { title: 'Product', link: '#' },
+    { title: 'Features', link: '#' },
+    { title: 'Marketplace', link: '#' },
+    { title: 'Company', link: '#' },
   ],
   buttonPrimaryLink: '/',
   buttonPrimaryText: 'Get started',

@@ -2,7 +2,11 @@ import { Popover, Transition } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import React, { Fragment } from 'react';
 
+import { Image } from '../../../types';
+
 export type HeroV1Props = {
+  title: string;
+  logo: Image;
   buttonPrimaryLink: string;
   buttonPrimaryText: string;
   buttonSecondaryLink: string;
@@ -11,13 +15,15 @@ export type HeroV1Props = {
     src: string;
     alt: string;
   };
-  navigation: Array<{ text: string; link: string }>;
+  navigation?: Array<{ title: string; link: string }>;
   subtitle: string;
   titleFirstRow: string;
   titleSecondRow: string;
 };
 
 export function HeroV1({
+  title,
+  logo,
   titleFirstRow,
   titleSecondRow,
   subtitle,
@@ -48,12 +54,8 @@ export function HeroV1({
                 <div className="flex flex-shrink-0 flex-grow items-center lg:flex-grow-0">
                   <div className="flex w-full items-center justify-between md:w-auto">
                     <a href="/">
-                      <span className="sr-only">Workflow</span>
-                      <img
-                        alt=""
-                        className="h-8 w-auto sm:h-10"
-                        src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                      />
+                      <span className="sr-only">{title}</span>
+                      <img alt={logo.alt} className="h-8 w-auto sm:h-10" src={logo.src} />
                     </a>
                     <div className="-mr-2 flex items-center md:hidden">
                       <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -64,14 +66,14 @@ export function HeroV1({
                   </div>
                 </div>
                 <div className="hidden md:ml-10 md:block md:space-x-8 md:pr-4">
-                  {navigation.map((item) => (
-                    <a key={item.text} className="font-medium text-gray-500 hover:text-gray-900" href={item.link}>
-                      {item.text}
+                  {navigation?.map((item) => (
+                    <a key={item.title} className="font-medium text-gray-500 hover:text-gray-900" href={item.link}>
+                      {item.title}
                     </a>
                   ))}
-                  <a className="font-medium text-indigo-600 hover:text-indigo-500" href="/">
+                  {/* <a className="font-medium text-indigo-600 hover:text-indigo-500" href="/">
                     Log in
-                  </a>
+                  </a> */}
                 </div>
               </nav>
             </div>
@@ -92,11 +94,7 @@ export function HeroV1({
                 <div className="overflow-hidden rounded-lg bg-white shadow-md ring-1 ring-black ring-opacity-5">
                   <div className="flex items-center justify-between px-5 pt-4">
                     <div>
-                      <img
-                        alt=""
-                        className="h-8 w-auto"
-                        src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                      />
+                      <img alt={logo.alt} className="h-8 w-auto" src={logo.src} />
                     </div>
                     <div className="-mr-2">
                       <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -106,22 +104,22 @@ export function HeroV1({
                     </div>
                   </div>
                   <div className="space-y-1 px-2 pt-2 pb-3">
-                    {navigation.map((item) => (
+                    {navigation?.map((item) => (
                       <a
-                        key={item.text}
+                        key={item.title}
                         className="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900"
                         href={item.link}
                       >
-                        {item.text}
+                        {item.title}
                       </a>
                     ))}
                   </div>
-                  <a
+                  {/* <a
                     className="block w-full bg-gray-50 px-5 py-3 text-center font-medium text-indigo-600 hover:bg-gray-100"
                     href="/"
                   >
                     Log in
-                  </a>
+                  </a> */}
                 </div>
               </Popover.Panel>
             </Transition>
@@ -137,22 +135,26 @@ export function HeroV1({
                 {subtitle}
               </p>
               <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-                <div className="rounded-md shadow">
-                  <a
-                    className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 md:py-4 md:px-10 md:text-lg"
-                    href={buttonPrimaryLink}
-                  >
-                    {buttonPrimaryText}
-                  </a>
-                </div>
-                <div className="mt-3 sm:mt-0 sm:ml-3">
-                  <a
-                    className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-100 px-8 py-3 text-base font-medium text-indigo-700 hover:bg-indigo-200 md:py-4 md:px-10 md:text-lg"
-                    href={buttonSecondaryLink}
-                  >
-                    {buttonSecondaryText}
-                  </a>
-                </div>
+                {buttonPrimaryText && (
+                  <div className="rounded-md shadow">
+                    <a
+                      className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 md:py-4 md:px-10 md:text-lg"
+                      href={buttonPrimaryLink}
+                    >
+                      {buttonPrimaryText}
+                    </a>
+                  </div>
+                )}
+                {buttonSecondaryText && (
+                  <div className="mt-3 sm:mt-0 sm:ml-3">
+                    <a
+                      className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-100 px-8 py-3 text-base font-medium text-indigo-700 hover:bg-indigo-200 md:py-4 md:px-10 md:text-lg"
+                      href={buttonSecondaryLink}
+                    >
+                      {buttonSecondaryText}
+                    </a>
+                  </div>
+                )}
               </div>
             </div>
           </main>

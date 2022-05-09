@@ -7,14 +7,10 @@ import { parseLink } from '../../../utils/parseLink';
 
 type HeroV1Props = HeroV1Storyblok;
 
-const navigation = [
-  { text: 'Product', link: '#' },
-  { text: 'Features', link: '#' },
-  { text: 'Marketplace', link: '#' },
-  { text: 'Company', link: '#' },
-];
-
 export function HeroV1({
+  title,
+  logo,
+  navigation,
   titleFirstRow,
   titleSecondRow,
   subtitle,
@@ -31,8 +27,12 @@ export function HeroV1({
       buttonSecondaryLink={parseLink(buttonSecondaryLink)}
       buttonSecondaryText={buttonSecondaryText}
       image={parseImage(image)}
-      navigation={navigation}
+      logo={parseImage(logo)}
+      navigation={navigation?.map((item) => {
+        return { ...item, link: parseLink(item.link) };
+      })}
       subtitle={subtitle}
+      title={title}
       titleFirstRow={titleFirstRow}
       titleSecondRow={titleSecondRow}
     />

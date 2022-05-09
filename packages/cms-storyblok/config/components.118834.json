@@ -135,7 +135,7 @@
       "name": "FeaturesV1",
       "display_name": null,
       "created_at": "2022-04-21T21:32:36.310Z",
-      "updated_at": "2022-05-06T14:14:00.702Z",
+      "updated_at": "2022-05-09T07:59:50.096Z",
       "id": 2378563,
       "schema": {
         "pretitle": {
@@ -166,8 +166,18 @@
       "is_root": false,
       "preview_tmpl": null,
       "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
+      "all_presets": [
+        {
+          "id": 1498188,
+          "name": "Ring",
+          "component_id": 2378563,
+          "image": "",
+          "color": null,
+          "icon": null,
+          "description": null
+        }
+      ],
+      "preset_id": 1498188,
       "real_name": "FeaturesV1",
       "component_group_uuid": "463f1c70-9e1f-432e-9854-675fa1cd6c95",
       "color": null,
@@ -513,56 +523,112 @@
       "name": "HeroV1",
       "display_name": null,
       "created_at": "2021-09-04T20:15:24.259Z",
-      "updated_at": "2022-04-21T09:07:18.711Z",
+      "updated_at": "2022-05-09T07:37:05.357Z",
       "id": 1759788,
       "schema": {
+        "title": {
+          "type": "text",
+          "pos": 0,
+          "required": true
+        },
+        "logo": {
+          "type": "asset",
+          "pos": 1,
+          "filetypes": ["images"],
+          "required": true
+        },
+        "navigation": {
+          "type": "bloks",
+          "pos": 2,
+          "restrict_components": true,
+          "component_whitelist": ["HeroV1-NavigationItem"]
+        },
         "titleFirstRow": {
           "type": "text",
           "required": true,
           "translatable": true,
-          "pos": 0
+          "pos": 3
         },
         "titleSecondRow": {
           "type": "text",
-          "pos": 1,
+          "pos": 4,
           "required": true
         },
         "subtitle": {
           "type": "text",
           "required": true,
           "translatable": true,
-          "pos": 2
+          "pos": 5
         },
         "buttonPrimaryText": {
           "type": "text",
-          "pos": 3,
-          "required": true
+          "pos": 6,
+          "required": false
         },
         "buttonPrimaryLink": {
           "type": "multilink",
-          "pos": 4,
-          "required": true,
+          "pos": 7,
+          "required": false,
           "restrict_content_types": false,
           "force_link_scope": false
         },
         "buttonSecondaryText": {
           "type": "text",
-          "pos": 5,
-          "required": true
+          "pos": 8,
+          "required": false
         },
         "buttonSecondaryLink": {
           "type": "multilink",
           "restrict_content_types": false,
           "show_anchor": false,
-          "pos": 6,
-          "required": true
+          "pos": 9,
+          "required": false
         },
         "image": {
           "type": "asset",
           "filetypes": ["images"],
           "required": true,
           "display_name": "",
-          "pos": 7
+          "pos": 10
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [
+        {
+          "id": 1498142,
+          "name": "Ring",
+          "component_id": 1759788,
+          "image": "",
+          "color": null,
+          "icon": null,
+          "description": null
+        }
+      ],
+      "preset_id": 1498142,
+      "real_name": "HeroV1",
+      "component_group_uuid": "463f1c70-9e1f-432e-9854-675fa1cd6c95",
+      "color": null,
+      "icon": null,
+      "component_group_name": "Sections"
+    },
+    {
+      "name": "HeroV1-NavigationItem",
+      "display_name": null,
+      "created_at": "2022-05-09T07:28:36.721Z",
+      "updated_at": "2022-05-09T07:28:57.114Z",
+      "id": 2425079,
+      "schema": {
+        "title": {
+          "type": "text",
+          "required": true
+        },
+        "link": {
+          "type": "multilink",
+          "required": true
         }
       },
       "image": null,
@@ -572,11 +638,11 @@
       "is_nestable": true,
       "all_presets": [],
       "preset_id": null,
-      "real_name": "HeroV1",
-      "component_group_uuid": "463f1c70-9e1f-432e-9854-675fa1cd6c95",
+      "real_name": "HeroV1-NavigationItem",
+      "component_group_uuid": "55999546-1730-4691-948a-0ae3c381b398",
       "color": null,
       "icon": null,
-      "component_group_name": "Sections"
+      "component_group_name": "Blocks"
     },
     {
       "name": "HeroV2",

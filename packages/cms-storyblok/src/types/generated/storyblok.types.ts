@@ -311,11 +311,21 @@ export interface HeaderV2NavigationItemStoryblok {
 }
 
 export interface HeroV1Storyblok {
+  title: string;
+  logo: {
+    alt?: string;
+    copyright?: string;
+    id: number;
+    filename: string;
+    name: string;
+    title?: string;
+  };
+  navigation?: HeroV1NavigationItemStoryblok[];
   titleFirstRow: string;
   titleSecondRow: string;
   subtitle: string;
-  buttonPrimaryText: string;
-  buttonPrimaryLink:
+  buttonPrimaryText?: string;
+  buttonPrimaryLink?:
     | {
         cached_url?: string;
         linktype?: string;
@@ -338,8 +348,8 @@ export interface HeroV1Storyblok {
         linktype?: 'email';
         [k: string]: any;
       };
-  buttonSecondaryText: string;
-  buttonSecondaryLink:
+  buttonSecondaryText?: string;
+  buttonSecondaryLink?:
     | {
         cached_url?: string;
         linktype?: string;
@@ -372,6 +382,36 @@ export interface HeroV1Storyblok {
   };
   _uid: string;
   component: 'HeroV1';
+  [k: string]: any;
+}
+
+export interface HeroV1NavigationItemStoryblok {
+  title: string;
+  link:
+    | {
+        cached_url?: string;
+        linktype?: string;
+        [k: string]: any;
+      }
+    | {
+        id?: string;
+        cached_url?: string;
+        linktype?: 'story';
+        [k: string]: any;
+      }
+    | {
+        url?: string;
+        cached_url?: string;
+        linktype?: 'asset' | 'url';
+        [k: string]: any;
+      }
+    | {
+        email?: string;
+        linktype?: 'email';
+        [k: string]: any;
+      };
+  _uid: string;
+  component: 'HeroV1-NavigationItem';
   [k: string]: any;
 }
 
