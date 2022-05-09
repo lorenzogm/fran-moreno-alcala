@@ -7,6 +7,7 @@ import {
   useStoryblok,
 } from '@ring/cms-storyblok';
 import { GetStaticPaths, GetStaticProps } from 'next';
+import Head from 'next/head';
 import { ReactElement } from 'react';
 
 import { attachContentToStory } from '../api';
@@ -57,10 +58,11 @@ export const getStaticProps: GetStaticProps = async ({ locale, locales, params, 
     };
   }
   try {
-    const { story, sections } = await getStory({ params, locale, preview });
+    const { story, sections, config } = await getStory({ params, locale, preview });
 
     return {
       props: {
+        config,
         story,
         sections,
         preview,
@@ -84,7 +86,7 @@ type CatchAllPageProps = {
   config: GlobalConfigStoryblok;
 };
 
-export default function CatchAllPage({ story, sections, locale }: CatchAllPageProps): ReactElement {
+export default function CatchAllPage({ config, story, sections, locale }: CatchAllPageProps): ReactElement {
   const enableBridge = true; // load the storyblok bridge everywhere
   // use the preview variable to enable the bridge only in preview mode
   // const enableBridge = preview;
@@ -95,10 +97,29 @@ export default function CatchAllPage({ story, sections, locale }: CatchAllPagePr
     resolveRelations: ['ContentPage.layout'],
   });
 
+  const metaTitle = story.content.metaTitle || config.content.metaTitle;
+  const metaDescription = story.content.metaDescription || config.content.metaDescription;
+  const metaOpenGraphImage = story.content.metaOpenGraphImage?.filename || config.content.metaOpenGraphImage?.filename;
+
   return (
-    // eslint-disable-next-line react/jsx-props-no-spreading
-    <RenderLayout layout={content.layout}>
-      <RenderPage content={attachContentToStory({ content, sections })} />
-    </RenderLayout>
+    <>
+      <Head>
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <meta charSet="utf-8" />
+
+        <title>{metaTitle}</title>
+        <meta content={metaDescription} key="description" name="description" />
+
+        {/* Open Graph */}
+        <meta content={metaTitle} key="ogtitle" property="og:title" />
+        <meta content={metaDescription} key="ogdesc" property="og:description" />
+        <meta content={metaTitle} key="ogsitename" property="og:site_name" />
+        <meta content={metaOpenGraphImage} key="ogimage" property="og:image" />
+      </Head>
+
+      <RenderLayout layout={content.layout}>
+        <RenderPage content={attachContentToStory({ content, sections })} />
+      </RenderLayout>
+    </>
   );
 }

@@ -35,6 +35,8 @@ export interface ContentPageStoryblok {
     | ProductListV1Storyblok
     | VideoV1Storyblok
   )[];
+  metaTitle?: string;
+  metaDescription?: string;
   _uid: string;
   component: 'ContentPage';
   [k: string]: any;
@@ -129,8 +131,8 @@ export interface GlobalStoryblok {
 }
 
 export interface GlobalConfigStoryblok {
-  metaTitle?: string;
-  metaDescription?: string;
+  metaTitle: string;
+  metaDescription: string;
   metaOpenGraphImage?: {
     alt?: string;
     copyright?: string;
@@ -139,7 +141,14 @@ export interface GlobalConfigStoryblok {
     name: string;
     title?: string;
   };
-  favicon?: string;
+  favicon?: {
+    alt?: string;
+    copyright?: string;
+    id: number;
+    filename: string;
+    name: string;
+    title?: string;
+  };
   revalidate: number;
   _uid: string;
   component: 'GlobalConfig';

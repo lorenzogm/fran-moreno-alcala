@@ -1,7 +1,8 @@
-import { SectionsProps, Story } from '@ring/cms-storyblok';
+import { GlobalConfigStoryblok, SectionsProps, Story } from '@ring/cms-storyblok';
 import { ParsedUrlQuery } from 'querystring';
 
 import { attachContentToStory } from './attachContentToStory';
+import { getConfig } from './getConfig';
 import { getSectionsData } from './getSectionsData';
 import { getSlug } from './getSlug';
 import { getStoryBySlug } from './getStoryBySlug';
@@ -15,14 +16,15 @@ type GetStory = {
 export async function getStory({ params, preview, locale }: GetStory): Promise<{
   story: Story;
   sections: SectionsProps;
+  config: GlobalConfigStoryblok;
 }> {
   const slug = getSlug(params);
 
   const productSlug = params.slug && params.slug[0] === 'p' ? params.slug[1] : undefined;
 
-  const [story] = await Promise.all([
+  const [story, config] = await Promise.all([
     getStoryBySlug({ slug, preview, locale }),
-    // getConfig({ locale, preview }),
+    getConfig({ locale, preview }),
   ]);
 
   const sections: Array<string> = [
@@ -40,5 +42,6 @@ export async function getStory({ params, preview, locale }: GetStory): Promise<{
       content: storyContent,
     },
     sections: sectionsWithData,
+    config,
   };
 }

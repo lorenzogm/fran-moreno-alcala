@@ -57,7 +57,7 @@
       "name": "ContentPage",
       "display_name": null,
       "created_at": "2021-07-01T03:04:11.893Z",
-      "updated_at": "2022-04-29T08:53:56.743Z",
+      "updated_at": "2022-05-09T14:07:55.472Z",
       "id": 1627132,
       "schema": {
         "layout": {
@@ -80,6 +80,18 @@
           "component_group_whitelist": ["463f1c70-9e1f-432e-9854-675fa1cd6c95"],
           "pos": 1,
           "required": false
+        },
+        "tab-d3ec400b-3214-4f54-be85-87f683c2ad05": {
+          "type": "tab",
+          "display_name": "SEO",
+          "keys": ["metaTitle", "metaDescription"],
+          "pos": 0
+        },
+        "metaTitle": {
+          "type": "text"
+        },
+        "metaDescription": {
+          "type": "text"
         }
       },
       "image": null,
@@ -271,7 +283,7 @@
       "name": "GlobalConfig",
       "display_name": null,
       "created_at": "2022-04-28T13:56:52.011Z",
-      "updated_at": "2022-05-08T07:03:13.051Z",
+      "updated_at": "2022-05-09T14:14:09.045Z",
       "id": 2396399,
       "schema": {
         "tab-8e92f69a-4d90-46ed-bba8-27a0ac5fcf45": {
@@ -289,17 +301,24 @@
           "pos": 1
         },
         "metaTitle": {
-          "type": "text"
+          "type": "text",
+          "required": true,
+          "translatable": false,
+          "max_length": "70"
         },
         "metaDescription": {
-          "type": "text"
+          "type": "text",
+          "translatable": false,
+          "required": true,
+          "max_length": "160"
         },
         "metaOpenGraphImage": {
           "type": "asset",
           "filetypes": ["images"]
         },
         "favicon": {
-          "type": "text"
+          "type": "asset",
+          "filetypes": ["images"]
         },
         "revalidate": {
           "type": "number",
@@ -313,8 +332,18 @@
       "is_root": true,
       "preview_tmpl": null,
       "is_nestable": false,
-      "all_presets": [],
-      "preset_id": null,
+      "all_presets": [
+        {
+          "id": 1498986,
+          "name": "Ring",
+          "component_id": 2396399,
+          "image": "",
+          "color": null,
+          "icon": null,
+          "description": null
+        }
+      ],
+      "preset_id": 1498986,
       "real_name": "GlobalConfig",
       "component_group_uuid": null,
       "color": null,

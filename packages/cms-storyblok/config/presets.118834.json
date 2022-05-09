@@ -1,6 +1,109 @@
 {
   "presets": [
     {
+      "id": 1498986,
+      "name": "Ring",
+      "preset": {
+        "_uid": "c161addf-5e23-48b6-b884-ad2dea2d996f",
+        "body": [],
+        "title": "",
+        "footer": [],
+        "header": [
+          {
+            "_uid": "d9f2b47c-354d-4a59-9356-b032e3378ab6",
+            "title": "Ring",
+            "component": "HeaderV2",
+            "navigation": [
+              {
+                "_uid": "1cec4b71-70a6-432e-ab18-2bd4172947f8",
+                "link": {
+                  "id": "3be1da6b-f64e-4079-8de6-de193b96bf51",
+                  "url": "",
+                  "anchor": "",
+                  "linktype": "story",
+                  "fieldtype": "multilink",
+                  "cached_url": "p/dog-cat-baby-body"
+                },
+                "items": [],
+                "title": "Product",
+                "component": "HeaderV2-NavigationItem"
+              },
+              {
+                "_uid": "c2aee4ac-aadc-4366-84c6-71b1d794b605",
+                "link": {
+                  "id": "e6fea3e7-9a26-460c-ac1f-8fa1eb17bd4e",
+                  "url": "",
+                  "linktype": "story",
+                  "fieldtype": "multilink",
+                  "cached_url": "home"
+                },
+                "items": [],
+                "title": "About",
+                "component": "HeaderV2-NavigationItem"
+              },
+              {
+                "_uid": "ae96d429-17ea-478e-b383-11343fb82b59",
+                "link": {
+                  "id": "e6fea3e7-9a26-460c-ac1f-8fa1eb17bd4e",
+                  "url": "",
+                  "linktype": "story",
+                  "fieldtype": "multilink",
+                  "cached_url": "home"
+                },
+                "items": [],
+                "title": "Contact",
+                "component": "HeaderV2-NavigationItem"
+              }
+            ]
+          }
+        ],
+        "favicon": {
+          "id": 2919200,
+          "alt": "",
+          "name": "",
+          "focus": null,
+          "title": "",
+          "filename": "https://a.storyblok.com/f/118834/512x512/c8ca90fffa/the-one-ring-icon-17.jpeg",
+          "copyright": "",
+          "fieldtype": "asset"
+        },
+        "og_image": {
+          "id": null,
+          "alt": null,
+          "name": "",
+          "focus": null,
+          "title": null,
+          "filename": "",
+          "copyright": null,
+          "fieldtype": "asset"
+        },
+        "component": "GlobalConfig",
+        "metaTitle": "Ring: The accelerator to speed-up your web development",
+        "revalidate": "10",
+        "meta_keywords": "",
+        "metaDescription": "Ring is an opinionated framework built with React and Next.js which let you focus on delivering value to your customers.",
+        "meta_description": "",
+        "metaOpenGraphImage": {
+          "id": 2919200,
+          "alt": "",
+          "name": "",
+          "focus": null,
+          "title": "",
+          "filename": "https://a.storyblok.com/f/118834/512x512/c8ca90fffa/the-one-ring-icon-17.jpeg",
+          "copyright": "",
+          "fieldtype": "asset"
+        }
+      },
+      "component_id": 2396399,
+      "space_id": 118834,
+      "created_at": "2022-05-09T14:13:56.860Z",
+      "updated_at": "2022-05-09T14:13:56.860Z",
+      "image": "",
+      "color": null,
+      "icon": null,
+      "description": null
+    },
+    {
       "id": 1498188,
       "name": "Ring",
       "preset": {
