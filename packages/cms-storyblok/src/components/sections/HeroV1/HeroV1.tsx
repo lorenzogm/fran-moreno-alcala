@@ -22,15 +22,19 @@ export function HeroV1({
 }: HeroV1Props): ReactElement {
   return (
     <HeroV1UI
-      buttonPrimaryLink={parseLink(buttonPrimaryLink)}
+      buttonPrimaryLink={buttonPrimaryLink ? parseLink(buttonPrimaryLink) : undefined}
       buttonPrimaryText={buttonPrimaryText}
-      buttonSecondaryLink={parseLink(buttonSecondaryLink)}
+      buttonSecondaryLink={buttonSecondaryLink ? parseLink(buttonSecondaryLink) : undefined}
       buttonSecondaryText={buttonSecondaryText}
       image={parseImage(image)}
       logo={parseImage(logo)}
-      navigation={navigation?.map((item) => {
-        return { ...item, link: parseLink(item.link) };
-      })}
+      navigation={
+        navigation
+          ? navigation.map((item) => {
+              return { ...item, link: parseLink(item.link) };
+            })
+          : undefined
+      }
       subtitle={subtitle}
       title={title}
       titleFirstRow={titleFirstRow}

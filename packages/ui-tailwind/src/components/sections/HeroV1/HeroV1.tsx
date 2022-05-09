@@ -7,10 +7,10 @@ import { Image } from '../../../types';
 export type HeroV1Props = {
   title: string;
   logo: Image;
-  buttonPrimaryLink: string;
-  buttonPrimaryText: string;
-  buttonSecondaryLink: string;
-  buttonSecondaryText: string;
+  buttonPrimaryLink?: string;
+  buttonPrimaryText?: string;
+  buttonSecondaryLink?: string;
+  buttonSecondaryText?: string;
   image: {
     src: string;
     alt: string;
