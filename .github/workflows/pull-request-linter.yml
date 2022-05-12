@@ -27,6 +27,7 @@ jobs:
             api
             ci
             deps
+            deps-dev
             generated
             hooks
             pages
