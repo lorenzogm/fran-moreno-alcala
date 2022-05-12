@@ -13,7 +13,9 @@
   "scripts": {
     "build": "yarn tsup --minify",
     "dev": "yarn tsup --watch",
-    "lint": "TIMING=1 eslint src --fix",
+    "lint": "run-p lint:*",
+    "lint:eslint": "TIMING=1 eslint src --fix",
+    "lint:typescript": "tsc --noEmit --incremental",
     "test": "jest",
     "sync": "./scripts/sync-code.sh",
     "sync:spaces": "./scripts/sync-spaces.sh",
@@ -38,6 +40,7 @@
     "@ring/config-typescript": "*",
     "babel-loader": "8.2.5",
     "eslint": "8.14.0",
+    "npm-run-all": "4.1.5",
     "storyblok-generate-ts": "1.4.1",
     "tsup": "5.12.6",
     "typescript": "4.6.4"

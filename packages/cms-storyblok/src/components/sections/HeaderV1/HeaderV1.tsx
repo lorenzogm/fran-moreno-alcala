@@ -1,7 +1,7 @@
 import { HeaderV1 as HeaderV1UI } from '@ring/ui-tailwind';
 import React, { ReactElement } from 'react';
 
-import type { HeaderV1Storyblok, StoryblokLink } from '../../../types';
+import type { HeaderV1Storyblok } from '../../../types';
 import { parseImage } from '../../../utils/parseImage';
 import { parseLink } from '../../../utils/parseLink';
 
@@ -20,7 +20,7 @@ export function HeaderV1({
     ? navigation.map((link) => {
         return {
           title: link.title,
-          link: parseLink(link.link as StoryblokLink),
+          link: parseLink(link.link),
         };
       })
     : [];

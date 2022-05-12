@@ -6,20 +6,20 @@
       "cache": false,
       "dependsOn": ["^dev"]
     },
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["**/*.tsx", "**/*.ts", "**/*.js", "**/*.json"],
+      "outputs": ["dist/**", ".next/**", "storybook-static/**"]
+    },
     "lint": {
       "dependsOn": ["build"],
       "inputs": ["**/*.tsx", "**/*.ts", "**/*.js", "**/*.json"],
       "outputs": []
     },
-    "test": {
-      "dependsOn": [],
+    "deploy": {
+      "dependsOn": ["build", "lint"],
       "inputs": ["**/*.tsx", "**/*.ts", "**/*.js", "**/*.json"],
-      "outputs": ["coverage/**"]
-    },
-    "build": {
-      "dependsOn": ["^build"],
-      "inputs": ["**/*.tsx", "**/*.ts", "**/*.js", "**/*.json"],
-      "outputs": ["dist/**", ".next/**", "storybook-static/**"]
+      "outputs": []
     },
     "start": {
       "dependsOn": ["build"]
@@ -27,10 +27,10 @@
     "sync": {
       "dependsOn": []
     },
-    "deploy": {
-      "dependsOn": ["build", "lint"],
+    "test": {
+      "dependsOn": [],
       "inputs": ["**/*.tsx", "**/*.ts", "**/*.js", "**/*.json"],
-      "outputs": []
+      "outputs": ["coverage/**"]
     },
     "cms-storyblok": {
       "dependsOn": ["^build", "$STORYBLOK_ACCESS_TOKEN"]

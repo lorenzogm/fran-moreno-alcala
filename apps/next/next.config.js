@@ -10,6 +10,13 @@ module.exports = withTranspileModules({
     // a non-locale prefixed path e.g. `/hello`
     defaultLocale: 'en',
   },
+  typescript: {
+    // !! WARN !!
+    // Dangerously allow production builds to successfully complete even if
+    // your project has type errors.
+    // !! WARN !!
+    ignoreBuildErrors: true,
+  },
   webpack: (config) => {
     config.resolve.fallback = { crypto: false, fs: false, net: false, tls: false };
 

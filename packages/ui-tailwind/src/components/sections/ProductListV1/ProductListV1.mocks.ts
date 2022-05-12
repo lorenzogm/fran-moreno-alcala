@@ -8,8 +8,6 @@ export const ProductListV1Mock: ProductListV1Props = {
       slug: 'product-name',
       price: '20',
       currency: 'EUR',
-      sale: false,
-      sale_price: null,
       images: [
         {
           alt: 'Alt',
@@ -22,8 +20,6 @@ export const ProductListV1Mock: ProductListV1Props = {
       slug: 'product-name',
       price: '20',
       currency: 'EUR',
-      sale: false,
-      sale_price: null,
       images: [
         {
           alt: 'Alt',
@@ -36,8 +32,6 @@ export const ProductListV1Mock: ProductListV1Props = {
       slug: 'product-name',
       price: '20',
       currency: 'EUR',
-      sale: false,
-      sale_price: null,
       images: [
         {
           alt: 'Alt',
@@ -50,8 +44,6 @@ export const ProductListV1Mock: ProductListV1Props = {
       slug: 'product-name',
       price: '20',
       currency: 'EUR',
-      sale: false,
-      sale_price: null,
       images: [
         {
           alt: 'Alt',
@@ -64,8 +56,6 @@ export const ProductListV1Mock: ProductListV1Props = {
       slug: 'product-name',
       price: '20',
       currency: 'EUR',
-      sale: false,
-      sale_price: null,
       images: [
         {
           alt: 'Alt',
@@ -78,8 +68,6 @@ export const ProductListV1Mock: ProductListV1Props = {
       slug: 'product-name',
       price: '20',
       currency: 'EUR',
-      sale: false,
-      sale_price: null,
       images: [
         {
           alt: 'Alt',
