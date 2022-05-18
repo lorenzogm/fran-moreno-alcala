@@ -37,7 +37,7 @@
     "@b12k/branch-name-lint": "1.0.3",
     "@b12k/env-cmd": "10.2.0",
     "@commitlint/cli": "16.2.4",
-    "@commitlint/config-conventional": "16.2.4",
+    "@commitlint/config-conventional": "17.0.0",
     "commitizen": "4.2.4",
     "conventional-changelog-conventionalcommits": "4.6.3",
     "eslint": "8.14.0",
