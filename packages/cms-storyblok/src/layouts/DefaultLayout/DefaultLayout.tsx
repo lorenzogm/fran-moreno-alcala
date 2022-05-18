@@ -9,11 +9,11 @@ type DefaultLayoutProps = DefaultLayoutStoryblok & {
 };
 
 export function DefaultLayout({ children, content }: DefaultLayoutProps) {
-  const footerSections = content.footer
+  const footerSections = content?.footer
     ? // @ts-expect-error TODO: sync sections with storyblok
       content.footer.map((section) => <RenderSection key={content._uid} content={section} />)
     : null;
-  const headerSections = content.header
+  const headerSections = content?.header
     ? // @ts-expect-error TODO: sync sections with storyblok
       content.header.map((section) => <RenderSection key={content._uid} content={section} />)
     : null;

@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react';
 import StoryblokReact from 'storyblok-react';
 
+import { CardsV1 } from '../../components/sections/CardsV1';
 import { CarouselV1 } from '../../components/sections/CarouselV1';
 import { FeaturesV1 } from '../../components/sections/FeaturesV1';
 import { HeaderV1 } from '../../components/sections/HeaderV1';
@@ -11,6 +12,7 @@ import { ProductDetailV3 } from '../../components/sections/ProductDetailV3';
 import { ProductListV1 } from '../../components/sections/ProductListV1';
 import { VideoV1 } from '../../components/sections/VideoV1';
 import type {
+  CardsV1Storyblok,
   CarouselV1Storyblok,
   FeaturesV1Storyblok,
   HeaderV1Storyblok,
@@ -24,6 +26,7 @@ import type {
 import { Placeholder } from '../Placeholder';
 
 export type SectionsProps =
+  | CardsV1Storyblok
   | CarouselV1Storyblok
   | HeroV1Storyblok
   | HeroV2Storyblok
@@ -35,6 +38,7 @@ export type SectionsProps =
   | VideoV1Storyblok;
 
 const Sections = {
+  CardsV1,
   CarouselV1,
   HeroV1,
   HeroV2,

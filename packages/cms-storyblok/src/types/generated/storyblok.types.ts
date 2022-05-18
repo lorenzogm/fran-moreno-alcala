@@ -6,6 +6,53 @@ export interface BlogPostV1Storyblok {
   [k: string]: any;
 }
 
+export interface CardsV1Storyblok {
+  cards: CardsV1CardStoryblok[];
+  _uid: string;
+  component: 'CardsV1';
+  [k: string]: any;
+}
+
+export interface CardsV1CardStoryblok {
+  title: string;
+  description: string;
+  buttonTitle: string;
+  buttonLink:
+    | {
+        cached_url?: string;
+        linktype?: string;
+        [k: string]: any;
+      }
+    | {
+        id?: string;
+        cached_url?: string;
+        linktype?: 'story';
+        [k: string]: any;
+      }
+    | {
+        url?: string;
+        cached_url?: string;
+        linktype?: 'asset' | 'url';
+        [k: string]: any;
+      }
+    | {
+        email?: string;
+        linktype?: 'email';
+        [k: string]: any;
+      };
+  image: {
+    alt?: string;
+    copyright?: string;
+    id: number;
+    filename: string;
+    name: string;
+    title?: string;
+  };
+  _uid: string;
+  component: 'CardsV1-Card';
+  [k: string]: any;
+}
+
 export interface CarouselV1Storyblok {
   images?: {
     alt?: string;
@@ -24,6 +71,7 @@ export interface ContentPageStoryblok {
   layout?: string;
   sections?: (
     | BlogPostV1Storyblok
+    | CardsV1Storyblok
     | CarouselV1Storyblok
     | FeaturesV1Storyblok
     | FooterV1Storyblok
@@ -45,6 +93,7 @@ export interface ContentPageStoryblok {
 export interface DefaultLayoutStoryblok {
   header?: (
     | BlogPostV1Storyblok
+    | CardsV1Storyblok
     | CarouselV1Storyblok
     | FeaturesV1Storyblok
     | FooterV1Storyblok
@@ -58,6 +107,7 @@ export interface DefaultLayoutStoryblok {
   )[];
   footer?: (
     | BlogPostV1Storyblok
+    | CardsV1Storyblok
     | CarouselV1Storyblok
     | FeaturesV1Storyblok
     | FooterV1Storyblok
@@ -101,6 +151,7 @@ export interface FooterV1Storyblok {
 export interface GlobalStoryblok {
   header?: (
     | BlogPostV1Storyblok
+    | CardsV1Storyblok
     | CarouselV1Storyblok
     | FeaturesV1Storyblok
     | FooterV1Storyblok
@@ -114,6 +165,7 @@ export interface GlobalStoryblok {
   )[];
   footer?: (
     | BlogPostV1Storyblok
+    | CardsV1Storyblok
     | CarouselV1Storyblok
     | FeaturesV1Storyblok
     | FooterV1Storyblok

@@ -29,6 +29,89 @@
       "component_group_name": "Sections"
     },
     {
+      "name": "CardsV1",
+      "display_name": null,
+      "created_at": "2022-05-17T15:03:33.081Z",
+      "updated_at": "2022-05-17T15:06:33.406Z",
+      "id": 2458439,
+      "schema": {
+        "cards": {
+          "type": "bloks",
+          "maximum": "",
+          "required": true,
+          "restrict_components": true,
+          "component_whitelist": ["CardsV1-Card"]
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "CardsV1",
+      "component_group_uuid": "463f1c70-9e1f-432e-9854-675fa1cd6c95",
+      "color": null,
+      "icon": null,
+      "component_group_name": "Sections"
+    },
+    {
+      "name": "CardsV1-Card",
+      "display_name": null,
+      "created_at": "2022-05-17T15:04:06.263Z",
+      "updated_at": "2022-05-18T11:33:07.376Z",
+      "id": 2458440,
+      "schema": {
+        "title": {
+          "type": "text",
+          "required": true
+        },
+        "description": {
+          "type": "text",
+          "required": true
+        },
+        "buttonTitle": {
+          "type": "text",
+          "required": true
+        },
+        "buttonLink": {
+          "type": "multilink",
+          "required": true,
+          "restrict_content_types": false,
+          "component_whitelist": ["ContentPage"]
+        },
+        "image": {
+          "type": "asset",
+          "restrict_components": true,
+          "filetypes": ["images"],
+          "required": true
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [
+        {
+          "id": 1516820,
+          "name": "Ring",
+          "component_id": 2458440,
+          "image": "",
+          "color": null,
+          "icon": null,
+          "description": null
+        }
+      ],
+      "preset_id": 1516820,
+      "real_name": "CardsV1-Card",
+      "component_group_uuid": "55999546-1730-4691-948a-0ae3c381b398",
+      "color": null,
+      "icon": null,
+      "component_group_name": "Blocks"
+    },
+    {
       "name": "CarouselV1",
       "display_name": null,
       "created_at": "2022-04-30T17:15:13.165Z",
